@@ -6,7 +6,7 @@
 #    By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/08 10:52:56 by mlanca-c          #+#    #+#              #
-#    Updated: 2021/03/04 14:54:41 by mlanca-c         ###   ########.fr        #
+#    Updated: 2021/03/05 12:13:28 by mlanca-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,6 +56,9 @@ SRCSB= ft_lstnew.c \
        ft_lstiter.c \
        ft_lstmap.c
 OBJSB = $(SRCSB:.c=.o)
+EXTRASRC= ft_putchar.c \
+		  ft_putnbr_base.c
+EXTRAOBJ= $(EXTRASRC:.c=.o)
 INCLUDES= -I .
 CC= gcc
 CFLAGS= -Wall -Wextra -Werror
@@ -73,12 +76,15 @@ $(NAME): $(OBJS)
 bonus: $(NAME) $(OBJSB)
 	$(CLIB) $(NAME) $(OBJSB)
 
+extras: bonus $(EXTRAOBJ)
+	$(CLIB) $(NAME) $(EXTRAOBJ)	
+
 clean:
-	$(RM) $(OBJS) $(OBJSB)
+	$(RM) $(OBJS) $(OBJSB) $(EXTRAOBJ)
 
 fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
 
-.PHONY: all clean fclean re bonus
+.PHONY: all clean fclean re bonus extras
