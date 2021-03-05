@@ -6,7 +6,7 @@
 #    By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/04 14:40:53 by mlanca-c          #+#    #+#              #
-#    Updated: 2021/03/04 20:16:36 by mlanca-c         ###   ########.fr        #
+#    Updated: 2021/03/05 12:52:57 by mlanca-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME	=	libftprintf.a
 SRCS	=	ft_printf.c \
 			sources/set_params.c \
 			sources/get_case.c \
-			sources/case_c.c \
+		#	sources/case_c.c \
 			sources/case_s.c \
 			sources/case_p.c \
 			sources/case_d.c \
@@ -38,7 +38,7 @@ all: $(NAME)
 
 
 $(NAME): $(OBJS)
-	$(MAKE) bonus -C libft
+	$(MAKE) extras -C libft
 	cp $(LIBFT) $(NAME)
 	$(CLIB) $(NAME) $(OBJS)
 
