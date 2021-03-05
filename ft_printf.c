@@ -6,12 +6,12 @@
 /*   By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 15:03:39 by mlanca-c          #+#    #+#             */
-/*   Updated: 2021/03/04 20:27:14 by mlanca-c         ###   ########.fr       */
+/*   Updated: 2021/03/05 19:13:46 by mlanca-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/ft_printf.h"
-#include <stdio.h> //printf("\nflag_zero: %d\nflag_minus: %d\nflag_star: %d\nflag_mw: %d\nflag_point: %d\nflag_precision: %d\nflags.type: %c\n", flags.zero, flags.minus, flags.star, flags.min_width, flags.point, flags.precision, flags.type);
+
 t_flags	init(void)
 {
 	t_flags	flags;
@@ -31,17 +31,17 @@ int		check_format(char *input, va_list args)
 	int		count;
 	int		i;
 	t_flags	flags;
-	
+
 	if (!input)
 		return (0);
 	i = 0;
-	flags = init();
 	count = 0;
 	while (input[i])
 	{
+		flags = init();
 		if (input[i] == '%' && input[i + 1])
 		{
-			i += set_params(&input[i], &flags);
+			i += set_params(&input[i], &flags, args);
 			count += get_case(&flags, args);
 		}
 		else
@@ -50,7 +50,6 @@ int		check_format(char *input, va_list args)
 	}
 	return (count);
 }
-
 
 int		ft_printf(const char *fmt, ...)
 {
