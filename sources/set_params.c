@@ -6,13 +6,13 @@
 /*   By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/05 17:38:55 by mlanca-c          #+#    #+#             */
-/*   Updated: 2021/03/05 18:51:42 by mlanca-c         ###   ########.fr       */
+/*   Updated: 2021/03/11 17:48:27 by mlanca-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-void	handle_star(t_flags *flags, int arg)
+static void	handle_star(t_flags *flags, int arg)
 {
 	if (!flags->point)
 		flags->min_width = arg;
@@ -21,7 +21,7 @@ void	handle_star(t_flags *flags, int arg)
 	flags->star += 1;
 }
 
-int		handle_width(t_flags *flags, char *input)
+static int	handle_width(t_flags *flags, char *input)
 {
 	int		i;
 
@@ -35,7 +35,7 @@ int		handle_width(t_flags *flags, char *input)
 	return (--i);
 }
 
-int		set_params(char *input, t_flags *flags, va_list args)
+int			set_params(char *input, t_flags *flags, va_list args)
 {
 	int		i;
 
@@ -44,7 +44,7 @@ int		set_params(char *input, t_flags *flags, va_list args)
 	{
 		if (input[i] == '-')
 			flags->minus = 1;
-		else if (input[i] == '0' && !flags->minus)
+		else if (input[i] == '0' && !flags->minus && !flags->point)
 			flags->zero = 1;
 		else if (input[i] == '.')
 			flags->point = 1;
