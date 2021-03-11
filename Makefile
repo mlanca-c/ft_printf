@@ -6,20 +6,20 @@
 #    By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/04 14:40:53 by mlanca-c          #+#    #+#              #
-#    Updated: 2021/03/05 12:52:57 by mlanca-c         ###   ########.fr        #
+#    Updated: 2021/03/11 18:55:45 by mlanca-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-LIBFT	=	libft/libft.a
+LIBFT	=	./libft/libft.a
 NAME	=	libftprintf.a
 SRCS	=	ft_printf.c \
 			sources/set_params.c \
 			sources/get_case.c \
-		#	sources/case_c.c \
+			sources/case_c.c \
 			sources/case_s.c \
+			sources/case_percentage.c \
 			sources/case_p.c \
 			sources/case_d.c \
-			sources/case_i.c \
 			sources/case_u.c \
 			sources/case_x.c \
 			sources/case_upperx.c \
@@ -36,18 +36,17 @@ RM		=	rm -f
 
 all: $(NAME)
 
-
 $(NAME): $(OBJS)
-	$(MAKE) extras -C libft
+	$(MAKE) bonus -C ./libft
 	cp $(LIBFT) $(NAME)
 	$(CLIB) $(NAME) $(OBJS)
 
 clean:
-	$(MAKE) clean -C libft
+	$(MAKE) clean -C ./libft
 	$(RM) $(OBJS)
 
 fclean: clean
-	$(MAKE) fclean -C libft
+	$(MAKE) fclean -C ./libft
 	$(RM) $(NAME)
 
 re: fclean all
