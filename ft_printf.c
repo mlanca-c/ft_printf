@@ -6,11 +6,22 @@
 /*   By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 15:03:39 by mlanca-c          #+#    #+#             */
-/*   Updated: 2021/03/05 19:13:46 by mlanca-c         ###   ########.fr       */
+/*   Updated: 2021/03/11 18:33:02 by mlanca-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/ft_printf.h"
+
+void	print_flags(t_flags *flags)
+{
+	printf("\nminus: %d\n", flags->minus);
+	printf("zero: %d\n", flags->zero);
+	printf("star: %d\n", flags->star);
+	printf("width: %d\n", flags->min_width);
+	printf("point: %d\n", flags->point);
+	printf("precision: %d\n", flags->precision);
+	printf("type: %c\n", flags->type);
+}
 
 t_flags	init(void)
 {
@@ -21,7 +32,7 @@ t_flags	init(void)
 	flags.star = 0;
 	flags.min_width = 0;
 	flags.point = 0;
-	flags.precision = 0;
+	flags.precision = -1;
 	flags.type = 0;
 	return (flags);
 }
@@ -43,6 +54,7 @@ int		check_format(char *input, va_list args)
 		{
 			i += set_params(&input[i], &flags, args);
 			count += get_case(&flags, args);
+		//	print_flags(&flags);
 		}
 		else
 			count += ft_putchar(input[i]);
