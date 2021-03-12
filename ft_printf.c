@@ -6,7 +6,7 @@
 /*   By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 15:03:39 by mlanca-c          #+#    #+#             */
-/*   Updated: 2021/03/11 18:33:02 by mlanca-c         ###   ########.fr       */
+/*   Updated: 2021/03/12 20:22:13 by mlanca-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ t_flags	init(void)
 	flags.star = 0;
 	flags.min_width = 0;
 	flags.point = 0;
-	flags.precision = -1;
+	flags.precision = 0;
 	flags.type = 0;
 	return (flags);
 }
