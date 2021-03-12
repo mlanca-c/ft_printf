@@ -1,34 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   libft_bonus.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/12 17:35:34 by mlanca-c          #+#    #+#             */
-/*   Updated: 2021/03/11 19:54:53 by mlanca-c         ###   ########.fr       */
+/*   Created: 2021/03/11 19:00:54 by mlanca-c          #+#    #+#             */
+/*   Updated: 2021/03/12 13:30:45 by mlanca-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef LIBFT_BONUS_H
+# define LIBFT_BONUS_H
 
-void	ft_putnbr_fd(int n, int fd)
-{
-	if (n == -2147483648)
-	{
-		write(fd, "-2147483648", 11);
-		return ;
-	}
-	if (n < 0)
-	{
-		ft_putchar_fd('-', fd);
-		n = -n;
-	}
-	if (n < 10)
-	{
-		ft_putchar_fd(n + '0', fd);
-		return ;
-	}
-	ft_putnbr_fd(n / 10, fd);
-	ft_putnbr_fd(n % 10, fd);
-}
+int				ft_putchar(char c);
+void			ft_putnbr_base(unsigned long nbr, char *base, int *bytes);
+int				ft_putstr(char *str);
+int				ft_putstr_len(char *str, int len);
+int				ft_putnbr(int n);
+int				ft_putnbr_base_int(unsigned long nbr, char *base);
+char			*ft_itoa_base(unsigned n, char *base);
+
+#endif
