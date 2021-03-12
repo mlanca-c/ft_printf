@@ -5,81 +5,51 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/06 19:46:18 by mlanca-c          #+#    #+#             */
-/*   Updated: 2021/03/11 12:46:46 by mlanca-c         ###   ########.fr       */
+/*   Created: 2021/03/11 19:52:01 by mlanca-c          #+#    #+#             */
+/*   Updated: 2021/03/12 17:22:55 by mlanca-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-static void	handle_flags(t_flags *flags, char *str)
+static char	*handle_precision(t_flags *flags, char *s)
 {
-	if (flags->min_width < 0)
+	if (!flags->precision && flags->point)
+		s = ft_strdup("");
+	else if (flags->precision < 0)
 	{
-		flags->minus = 1;
-		flags->min_width *= -1;
-	}
-	if (flags->precision > flags->min_width)
-		flags->min_width = 0;
-	if (flags->point && flags->precision == -1)
 		flags->precision = 0;
-	else if (flags->precision > (int)ft_strlen(str) || flags->precision <= -1)
-		flags->precision = (int)ft_strlen(str);
+		s = ft_strdup(s);
+	}
+	else if (flags->precision < (int)ft_strlen(s) && flags->point)
+		s = ft_substr(s, 0, flags->precision);
+	else
+		s = ft_strdup(s);
+	return (s);
 }
 
-static int	handle_null(t_flags *flags)
+int			case_s(t_flags *flags, va_list args)
 {
 	int		count;
-	char	*str;
+	char	*s;
 
-	str = ft_strdup("(null)");
-	handle_flags(flags, str);
 	count = 0;
+	s = va_arg(args, char *);
+	if (!s)
+		s = "(null)";
+	s = handle_precision(flags, s);
 	if (flags->minus && flags->min_width)
 	{
-		count += ft_putstr_len(str, flags->precision);
-		while (flags->min_width-- > flags->precision)
-			count += ft_putchar(' ');
+		count += ft_putstr(s);
+		count += handle_width(flags, (int)ft_strlen(s));
 	}
 	else if (flags->min_width)
 	{
-		while (flags->zero && flags->min_width-- > flags->precision)
-			count += ft_putchar('0');
-		while (!flags->zero && flags->min_width-- > flags->precision)
-			count += ft_putchar(' ');
-		count += ft_putstr_len(str, flags->precision);
+		count += handle_width(flags, (int)ft_strlen(s));
+		count += ft_putstr(s);
 	}
 	else
-		count += ft_putstr_len(str, flags->precision);
-	free(str);
-	return (count);
-}
-
-int		case_s(t_flags *flags, va_list args)
-{
-	int		count;
-	char	*str;
-
-	str = va_arg(args, char *);
-	if (!str)
-		return (handle_null(flags));
-	handle_flags(flags, str);
-	count = 0;
-	if (flags->minus && flags->min_width)
-	{
-		count += ft_putstr_len(str, flags->precision);
-		while (flags->min_width-- > flags->precision)
-			count += ft_putchar(' ');
-	}
-	else if (flags->min_width)
-	{
-		while (flags->zero && flags->min_width-- > flags->precision)
-			count += ft_putchar('0');
-		while (!flags->zero && flags->min_width-- > flags->precision)
-			count += ft_putchar(' ');
-		count += ft_putstr_len(str, flags->precision);
-	}
-	else
-		count += ft_putstr_len(str, flags->precision);
+		count += ft_putstr(s);
+	free(s);
 	return (count);
 }

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/05 12:01:40 by mlanca-c          #+#    #+#             */
-/*   Updated: 2021/03/11 12:27:08 by mlanca-c         ###   ########.fr       */
+/*   Created: 2021/03/11 19:40:49 by mlanca-c          #+#    #+#             */
+/*   Updated: 2021/03/12 11:28:36 by mlanca-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,23 +17,14 @@ int		case_c(t_flags *flags, va_list args)
 	int		count;
 
 	count = 0;
-	if (flags->min_width < 0)
-	{
-		flags->min_width *= -1;
-		flags->minus = 1;
-	}
 	if (flags->minus && flags->min_width)
 	{
 		count += ft_putchar(va_arg(args, int));
-		while (--flags->min_width)
-			count += ft_putchar(' ');
+		count += handle_width(flags, 1);
 	}
 	else if (flags->min_width)
 	{
-		while (flags->zero && --flags->min_width)
-			count += ft_putchar('0');
-		while (!flags->zero && --flags->min_width)
-			count += ft_putchar(' ');
+		count += handle_width(flags, 1);
 		count += ft_putchar(va_arg(args, int));
 	}
 	else

@@ -6,7 +6,7 @@
 /*   By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/05 17:38:55 by mlanca-c          #+#    #+#             */
-/*   Updated: 2021/03/11 17:48:27 by mlanca-c         ###   ########.fr       */
+/*   Updated: 2021/03/12 20:24:13 by mlanca-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static void	handle_star(t_flags *flags, int arg)
 	flags->star += 1;
 }
 
-static int	handle_width(t_flags *flags, char *input)
+static int	handle_digit(t_flags *flags, char *input)
 {
 	int		i;
 
@@ -33,6 +33,17 @@ static int	handle_width(t_flags *flags, char *input)
 	while (ft_isdigit(input[i]))
 		i++;
 	return (--i);
+}
+
+static void	handle_minus(t_flags *flags)
+{
+	if (flags->min_width < 0)
+	{
+		flags->minus = 1;
+		flags->min_width *= -1;
+	}
+	if (flags->minus && flags->zero)
+		flags->zero = 0;
 }
 
 int			set_params(char *input, t_flags *flags, va_list args)
@@ -51,7 +62,7 @@ int			set_params(char *input, t_flags *flags, va_list args)
 		else if (input[i] == '*')
 			handle_star(flags, va_arg(args, int));
 		else if (ft_isdigit(input[i]))
-			i += handle_width(flags, &input[i]);
+			i += handle_digit(flags, &input[i]);
 		else if (ft_strchr("cspdiuxX%", input[i]) && i != 0)
 		{
 			flags->type = input[i];
@@ -60,5 +71,6 @@ int			set_params(char *input, t_flags *flags, va_list args)
 		else if (ft_isalpha(input[i]))
 			break ;
 	}
+	handle_minus(flags);
 	return (flags->type == 0 ? 0 : i);
 }

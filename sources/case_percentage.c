@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/05 12:02:10 by mlanca-c          #+#    #+#             */
-/*   Updated: 2021/03/05 19:28:41 by mlanca-c         ###   ########.fr       */
+/*   Created: 2021/03/11 19:46:40 by mlanca-c          #+#    #+#             */
+/*   Updated: 2021/03/12 14:18:52 by mlanca-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,11 @@ int		case_percentage(t_flags *flags)
 	if (flags->minus && flags->min_width)
 	{
 		count += ft_putchar('%');
-		while (--flags->min_width)
-			count += ft_putchar(' ');
+		count += handle_width(flags, 1);
 	}
 	else if (flags->min_width)
 	{
-		while (flags->zero && --flags->min_width)
-			count += ft_putchar('0');
-		while (!flags->zero && --flags->min_width)
-			count += ft_putchar(' ');
+		count += handle_width(flags, 1);
 		count += ft_putchar('%');
 	}
 	else

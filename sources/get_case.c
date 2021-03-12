@@ -6,7 +6,7 @@
 /*   By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 19:18:57 by mlanca-c          #+#    #+#             */
-/*   Updated: 2021/03/11 14:02:10 by mlanca-c         ###   ########.fr       */
+/*   Updated: 2021/03/12 14:28:30 by mlanca-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,8 @@ int		get_case(t_flags *flags, va_list args)
 		return (case_d(flags, args));
 	else if (flags->type == 'u')
 		return (case_u(flags, args));
-	else if (flags->type == 'x')
+	else if (flags->type == 'x' || flags->type == 'X')
 		return (case_x(flags, args));
-	else if (flags->type == 'X')
-		return (case_upperx(flags, args));
 	else if (flags->type == '%')
 		return (case_percentage(flags));
 	return (0);

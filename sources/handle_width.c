@@ -1,36 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   case_x.c                                           :+:      :+:    :+:   */
+/*   handle_width.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/11 19:58:25 by mlanca-c          #+#    #+#             */
-/*   Updated: 2021/03/12 14:21:50 by mlanca-c         ###   ########.fr       */
+/*   Created: 2021/03/12 11:01:46 by mlanca-c          #+#    #+#             */
+/*   Updated: 2021/03/12 14:33:37 by mlanca-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-int		case_x(t_flags *flags, va_list args)
+int		handle_width(t_flags *flags, int len)
 {
 	int		count;
-	char	*hex;
 
 	count = 0;
-	hex = arg_conversions(flags, args);
-	if (flags->minus && flags->min_width)
-	{
-		count += ft_putstr(hex);
-		handle_width(flags, (int)ft_strlen(hex));
-	}
-	else if (flags->min_width)
-	{
-		handle_width(flags, (int)ft_strlen(hex));
-		count += ft_putstr(hex);
-	}
-	else
-		count += ft_putstr(hex);
-	free(hex);
+	while (flags->zero && flags->min_width-- > len)
+		count += ft_putchar('0');
+	while (!flags->zero && flags->min_width-- > len)
+		count += ft_putchar(' ');
 	return (count);
 }
