@@ -6,7 +6,7 @@
 /*   By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/11 19:52:01 by mlanca-c          #+#    #+#             */
-/*   Updated: 2021/03/12 17:22:55 by mlanca-c         ###   ########.fr       */
+/*   Updated: 2021/03/13 19:08:16 by mlanca-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,6 @@ static char	*handle_precision(t_flags *flags, char *s)
 {
 	if (!flags->precision && flags->point)
 		s = ft_strdup("");
-	else if (flags->precision < 0)
-	{
-		flags->precision = 0;
-		s = ft_strdup(s);
-	}
 	else if (flags->precision < (int)ft_strlen(s) && flags->point)
 		s = ft_substr(s, 0, flags->precision);
 	else
@@ -34,7 +29,7 @@ int			case_s(t_flags *flags, va_list args)
 	char	*s;
 
 	count = 0;
-	s = va_arg(args, char *);
+	s = arg_conversions(flags, args);
 	if (!s)
 		s = "(null)";
 	s = handle_precision(flags, s);
