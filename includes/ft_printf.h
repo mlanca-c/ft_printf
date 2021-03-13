@@ -6,7 +6,7 @@
 /*   By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 14:54:58 by mlanca-c          #+#    #+#             */
-/*   Updated: 2021/03/12 14:27:57 by mlanca-c         ###   ########.fr       */
+/*   Updated: 2021/03/13 20:41:28 by mlanca-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,7 @@ int				case_x(t_flags *flags, va_list args);
 int				case_percentage(t_flags *flags);
 int				handle_width(t_flags *flags, int len);
 char			*arg_conversions(t_flags *flags, va_list args);
+char			*handle_negative(t_flags *flags, char *nbr);
+char			*handle_number(t_flags *flags, char *nbr);
 
 #endif
