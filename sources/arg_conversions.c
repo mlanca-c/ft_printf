@@ -6,7 +6,7 @@
 /*   By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/12 12:13:41 by mlanca-c          #+#    #+#             */
-/*   Updated: 2021/03/13 20:14:16 by mlanca-c         ###   ########.fr       */
+/*   Updated: 2021/03/13 21:03:03 by mlanca-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@ char	*arg_conversions(t_flags *flags, va_list args)
 	if (flags->type == 'X')
 		return (ft_itoa_base(va_arg(args, unsigned int), "0123456789ABCDEF"));
 	if (flags->type == 'p')
-		return (ft_itoa_base(va_arg(args, unsigned long), "0123456789abcdef"));
+		return (ft_litoa_base(va_arg(args, unsigned long), "0123456789abcdef"));
 	return (NULL);
 }

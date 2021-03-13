@@ -6,7 +6,7 @@
 /*   By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/11 19:58:25 by mlanca-c          #+#    #+#             */
-/*   Updated: 2021/03/12 14:21:50 by mlanca-c         ###   ########.fr       */
+/*   Updated: 2021/03/13 20:47:36 by mlanca-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,17 @@ int		case_x(t_flags *flags, va_list args)
 
 	count = 0;
 	hex = arg_conversions(flags, args);
+	if (flags->point)
+		flags->zero = 0;
+	hex = handle_number(flags, hex);
 	if (flags->minus && flags->min_width)
 	{
 		count += ft_putstr(hex);
-		handle_width(flags, (int)ft_strlen(hex));
+		count += handle_width(flags, (int)ft_strlen(hex));
 	}
 	else if (flags->min_width)
 	{
-		handle_width(flags, (int)ft_strlen(hex));
+		count += handle_width(flags, (int)ft_strlen(hex));
 		count += ft_putstr(hex);
 	}
 	else
