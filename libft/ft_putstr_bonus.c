@@ -6,7 +6,7 @@
 /*   By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/06 16:44:58 by mlanca-c          #+#    #+#             */
-/*   Updated: 2021/03/06 16:46:10 by mlanca-c         ###   ########.fr       */
+/*   Updated: 2021/03/13 15:37:11 by mlanca-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 int		ft_putstr(char *str)
 {
 	ft_putstr_fd(str, 1);
-	return (ft_strlen(str));
+	return ((int)ft_strlen(str));
 }

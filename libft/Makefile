@@ -6,7 +6,7 @@
 #    By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/08 10:52:56 by mlanca-c          #+#    #+#              #
-#    Updated: 2021/03/12 13:33:21 by mlanca-c         ###   ########.fr        #
+#    Updated: 2021/03/13 21:02:51 by mlanca-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,7 +61,9 @@ EXTRASRC	=	ft_putchar_bonus.c \
 		  		ft_putstr_bonus.c \
 		  		ft_putstr_len_bonus.c \
 		  		ft_putnbr_bonus.c \
-				ft_itoa_base_bonus.c
+				ft_itoa_base_bonus.c \
+				ft_free_function_bonus.c \
+				ft_litoa_base_bonus.c 
 EXTRAOBJ	= 	$(EXTRASRC:.c=.o)
 INCLUDES	= 	-I .
 CC			=	gcc
