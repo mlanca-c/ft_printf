@@ -6,12 +6,13 @@
 /*   By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 15:03:39 by mlanca-c          #+#    #+#             */
-/*   Updated: 2021/03/12 20:22:13 by mlanca-c         ###   ########.fr       */
+/*   Updated: 2021/03/13 18:03:35 by mlanca-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/ft_printf.h"
 
+//APAGAR e remover o include <stdio.h> do header
 void	print_flags(t_flags *flags)
 {
 	printf("\nminus: %d\n", flags->minus);
