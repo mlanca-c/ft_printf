@@ -4,5 +4,5 @@
 ## PROGRESS
 ```
 | case c: OK | case s: OK | case p: KO | case d: OK | case i: OK | case u: KO | case x: KO | case X: KO | case %: OK | 
-BONUS: KO
+| case bonus: KO |
 ```
