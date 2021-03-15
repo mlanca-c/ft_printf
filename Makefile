@@ -6,7 +6,7 @@
 #    By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/04 14:40:53 by mlanca-c          #+#    #+#              #
-#    Updated: 2021/03/12 14:27:37 by mlanca-c         ###   ########.fr        #
+#    Updated: 2021/03/15 16:14:58 by mlanca-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,6 +14,7 @@ LIBFT	=	./libft/libft.a
 NAME	=	libftprintf.a
 SRCS	=	ft_printf.c \
 			sources/set_params.c \
+			sources/handle_flags.c \
 			sources/get_case.c \
 			sources/case_c.c \
 			sources/case_s.c \
@@ -23,8 +24,14 @@ SRCS	=	ft_printf.c \
 			sources/case_u.c \
 			sources/case_x.c \
 			sources/case_percentage.c \
+			sources/case_n.c \
+			sources/case_f.c \
+			sources/case_g.c \
+			sources/case_e.c \
+			sources/case_o.c \
 			sources/handle_width.c \
-			sources/arg_conversions.c
+			sources/arg_conversions.c \
+			sources/handle_number.c
 OBJS	=	$(SRCS:.c=.o)
 INCS	=	-I includes
 CC		=	gcc
@@ -36,6 +43,8 @@ RM		=	rm -f
 	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o) $(INCS)
 
 all: $(NAME)
+
+bonus: $(NAME)
 
 $(NAME): $(OBJS)
 	$(MAKE) bonus -C ./libft
