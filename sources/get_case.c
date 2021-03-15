@@ -6,13 +6,13 @@
 /*   By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 19:18:57 by mlanca-c          #+#    #+#             */
-/*   Updated: 2021/03/12 14:28:30 by mlanca-c         ###   ########.fr       */
+/*   Updated: 2021/03/15 16:24:26 by mlanca-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-int		get_case(t_flags *flags, va_list args)
+int		get_case(t_flags *flags, va_list args, int *count)
 {
 	if (flags->type == 'c')
 		return (case_c(flags, args));
@@ -28,5 +28,15 @@ int		get_case(t_flags *flags, va_list args)
 		return (case_x(flags, args));
 	else if (flags->type == '%')
 		return (case_percentage(flags));
+	else if (flags->type == 'n')
+		return (case_n(flags, args, count));
+	else if (flags->type == 'f')
+		return (case_f(flags, args));
+	else if (flags->type == 'g')
+		return (case_g(flags, args));
+	else if (flags->type == 'e')
+		return (case_e(flags, args));
+	else if (flags->type == 'o')
+		return (case_o(flags, args));
 	return (0);
 }
