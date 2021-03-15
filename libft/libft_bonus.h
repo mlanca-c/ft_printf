@@ -6,7 +6,7 @@
 /*   By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/11 19:00:54 by mlanca-c          #+#    #+#             */
-/*   Updated: 2021/03/15 17:29:37 by mlanca-c         ###   ########.fr       */
+/*   Updated: 2021/03/15 19:27:49 by mlanca-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,7 @@ char	*ft_itoa_base(unsigned n, char *base);
 char	*ft_free_function(char *function, ...);
 char	*ft_llitoa_base(unsigned long long n, char *base);
 char	*ft_llitoa(long long n);
+int		ft_power(int nb, int power);
+char	*ft_ftoa(double d, int f);
 
 #endif
