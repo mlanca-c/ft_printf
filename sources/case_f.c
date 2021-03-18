@@ -6,24 +6,29 @@
 /*   By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/15 12:37:55 by mlanca-c          #+#    #+#             */
-/*   Updated: 2021/03/15 20:02:08 by mlanca-c         ###   ########.fr       */
+/*   Updated: 2021/03/18 19:15:47 by mlanca-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-static void	handle_precision(t_flags *flags)
+static void	handle_precision(t_flags *flags, double d)
 {
 	if (!flags->point)
 		flags->precision = 6;
+	else if (!flags->precision && !d)
+		flags->precision = -1;
 }
 
-static char		*handle_zero(t_flags *flags, char *nbr, int *count)
+static char	*handle_zero(t_flags *flags, char *d, int *count)
 {
-	if (nbr[0] == '-' && flags->zero)
+	if (!(ft_strncmp("inf", d, 3)) || (!(ft_strncmp("-inf", d, 4)) 
+				|| (!(ft_strncmp("nan", d, 3)))))
+			flags->zero = 0; 
+	else if (d[0] == '-' && flags->zero)
 	{
 		*count += ft_putchar('-');
-		nbr = ft_free_function("ft_substr", nbr, 1, (int)ft_strlen(nbr));
+		d = ft_free_function("ft_substr", d, 1, (int)ft_strlen(d));
 		flags->min_width -= 1;
 	}
 	else if (flags->space && flags->zero)
@@ -36,19 +41,21 @@ static char		*handle_zero(t_flags *flags, char *nbr, int *count)
 		*count += ft_putchar('+');
 		flags->min_width -= 1;
 	}
-	return (nbr);
+	return (d);
 }
 
 int			case_f(t_flags *flags, va_list args)
 {
 	int		count;
 	char	*d;
+	double	n;
 
 	count = 0;
-	handle_precision(flags);
-	d = ft_ftoa(va_arg(args, double), flags->precision);
+	n = va_arg(args, double);
+	handle_precision(flags, n);
+	d = ft_ftoa(n, flags->precision);
 	d = handle_zero(flags, d, &count);
-	d = handle_number(flags, d);
+	d = handle_double(flags, d);
 	if (flags->minus && flags->min_width)
 	{
 		count += ft_putstr(d);
