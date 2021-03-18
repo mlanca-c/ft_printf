@@ -3,6 +3,7 @@
 
 ## PROGRESS
 ```
+(float failing some tests)
 mandatory:
 | case c: OK | case s: OK | case p: OK | case d: OK | case i: OK | case u: OK | case x: OK | case X: OK | case %: OK | 
 bonus:
