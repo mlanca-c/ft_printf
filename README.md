@@ -1,7 +1,7 @@
 # ft_printf
 42Cursus-ft_printf/42Lisboa
 
-![REULTS](Screen Shot 2021-03-18 at 8.03.20 PM.png)
+ ![Mandatory](progress/mandatory)
 
 ## PROGRESS
 ```
