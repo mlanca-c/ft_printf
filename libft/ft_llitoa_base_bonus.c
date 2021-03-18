@@ -6,7 +6,7 @@
 /*   By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/13 21:01:01 by mlanca-c          #+#    #+#             */
-/*   Updated: 2021/03/15 16:00:56 by mlanca-c         ###   ########.fr       */
+/*   Updated: 2021/03/16 11:51:05 by mlanca-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static int	base_check(char *str)
 	return (i);
 }
 
-static int	get_len(unsigned long n, int b)
+static int	get_l(unsigned long n, int b)
 {
 	int		l;
 
@@ -61,7 +61,7 @@ char		*ft_llitoa_base(unsigned long long n, char *base)
 
 	if (!(b = base_check(base)))
 		return (NULL);
-	len = get_len(n, b);
+	len = get_l(n, b);
 	if (!(nbr = (char *)malloc(sizeof(char) * (len + 1))))
 		return (NULL);
 	nbr[len] = '\0';

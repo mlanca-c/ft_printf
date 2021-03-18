@@ -6,13 +6,13 @@
 /*   By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/15 15:36:40 by mlanca-c          #+#    #+#             */
-/*   Updated: 2021/03/15 16:04:13 by mlanca-c         ###   ########.fr       */
+/*   Updated: 2021/03/16 11:52:30 by mlanca-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	get_len(long long n)
+static int	get_l(long long n)
 {
 	int		l;
 
@@ -39,7 +39,7 @@ char		*ft_llitoa(long long n)
 
 	if (n == -9223372036854775808)
 		return (ft_strdup("-9223372036854775808"));
-	i = get_len(n);
+	i = get_l(n);
 	if (!(s = (char *)malloc(sizeof(char) * (i + 1))))
 		return (NULL);
 	s[i--] = '\0';

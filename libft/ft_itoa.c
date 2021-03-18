@@ -6,13 +6,13 @@
 /*   By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/12 17:33:36 by mlanca-c          #+#    #+#             */
-/*   Updated: 2021/03/10 18:39:42 by mlanca-c         ###   ########.fr       */
+/*   Updated: 2021/03/16 11:47:24 by mlanca-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	get_len(int n)
+int		get_len(int n)
 {
 	int		l;
 

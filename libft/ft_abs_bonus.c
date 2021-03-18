@@ -1,25 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_recursive_power.c                               :+:      :+:    :+:   */
+/*   ft_abs_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/18 22:15:48 by mlanca-c          #+#    #+#             */
-/*   Updated: 2021/03/16 15:30:26 by mlanca-c         ###   ########.fr       */
+/*   Created: 2021/03/16 12:17:07 by mlanca-c          #+#    #+#             */
+/*   Updated: 2021/03/16 12:18:05 by mlanca-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-long long int	ft_power(int nb, int power)
+int		ft_abs(int n)
 {
-	long long	p;
-
-	if (power < 0)
-		return (0);
-	p = 1;
-	while (power != 0)
-		ft_power(p *= nb, --power);
-	return (p);
+	if (n < 0)
+		return (-n);
+	return (n);
 }

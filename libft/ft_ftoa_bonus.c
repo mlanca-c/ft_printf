@@ -5,71 +5,73 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/15 18:45:42 by mlanca-c          #+#    #+#             */
-/*   Updated: 2021/03/15 20:09:57 by mlanca-c         ###   ########.fr       */
+/*   Created: 2021/03/18 14:38:28 by mlanca-c          #+#    #+#             */
+/*   Updated: 2021/03/18 19:32:02 by mlanca-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static int	get_len(double d)
+#include <stdio.h>
+static char	*get_dec(long double d, int precision, char *integral)
 {
-	int		l;
+	char		*decimal;
+	char		*temp;
+	double		value;
 
-	l = 0;
-	if (d == 0)
-		return (1);
-	if (d < 0)
+	if ((int)d - d != 0)
 	{
-		d *= -1;
-		l++;
+		value = (unsigned long long)(d * ft_power(10, precision) + .5);
+		//value = (double)value / ft_power(10, precision);
+		decimal = ft_llitoa(value);
 	}
-	while (d > 0)
-	{
-		d /= 10;
-		l++;
-	}
-	return (l);
+	else if (precision == 0)
+		return (integral);
+	else
+		decimal = ft_strdup("0");
+	integral = ft_free_function("ft_strjoin", integral, ".", 1);
+	while (ft_strlen(decimal) < precision)
+		decimal = ft_free_function("ft_strjoin", "0", decimal, 2);
+	temp = decimal;
+	decimal = ft_free_function("ft_strjoin", integral, decimal, 1);
+	free(temp);
+	return (decimal);
 }
 
-char		*ft_ftoa(double d, int f)
+static char	*get_int(long double d, int precision)
 {
-	char	*s;
-	char	*temp;
-	char	*nbr;
-	int		n;
-	int		minus;
+	char		*integral;
+	long long	n;
 
-	minus = 0;
+	n = (long long)d;
+	integral = ft_llitoa(n);
+	if (d < 0 && d > -1)
+		integral = ft_free_function("ft_strjoin", "-", integral, 2);
 	if (d < 0)
-	{
-		minus = 1;
 		d *= -1;
-	}
-	n = (int)d;
-	s = ft_itoa(n);
-	if (f != 0)
+	if (precision == 0)
+		return (integral);
+	return (get_dec(d, precision, integral));
+}
+
+char	*ft_ftoa(long double d, int precision)
+{
+	char		*number;
+
+	if (d == (1.0 / 0.0))
+		return (ft_strdup("inf"));
+	else if (d == -(1.0 / 0.0))
+		return (ft_strdup("-inf"));
+	else if (!(d == d))
+		return (ft_strdup("nan"));
+	else if (precision < 0)
+		return (ft_strdup("0"));
+	else if (d == (9223372036854775807 * 1.0))
 	{
-		temp = s;
-		s = ft_strjoin(s, ".");
-		free(temp);
-		nbr = ft_itoa((d - n) * ft_power(10, f));
-		while (ft_strlen(nbr) < f)
-		{
-			temp = nbr;
-			nbr = ft_strjoin("0", nbr);
-			free(temp);
-		}
-		temp = s;
-		s = ft_strjoin(s, nbr);
-		free(temp);
-		free(nbr);
+		number = ft_strdup("9223372036854775808.");
+		while (precision-- > 0)
+			number = ft_free_function("ft_strjoin", number, "0", 1);
 	}
-	if (minus)
-	{
-		temp = s;
-		s = ft_strjoin("-", s);
-		free(temp);
-	}
-	return (s);
+	else
+		number = get_int(d, precision);
+	return (number);
 }
