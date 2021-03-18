@@ -6,7 +6,7 @@
 #    By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/04 14:40:53 by mlanca-c          #+#    #+#              #
-#    Updated: 2021/03/15 16:14:58 by mlanca-c         ###   ########.fr        #
+#    Updated: 2021/03/18 18:10:27 by mlanca-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,8 @@ SRCS	=	ft_printf.c \
 			sources/case_o.c \
 			sources/handle_width.c \
 			sources/arg_conversions.c \
-			sources/handle_number.c
+			sources/handle_number.c \
+			sources/handle_double.c
 OBJS	=	$(SRCS:.c=.o)
 INCS	=	-I includes
 CC		=	gcc
