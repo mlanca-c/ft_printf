@@ -2,6 +2,8 @@
 42Cursus-ft_printf/42Lisboa
 
  ![Mandatory](progress/mandatory.png)
+ ![Mandatory](progress/bonus_part1.png)
+ ![Mandatory](progress/bonus_part2.png)
 
 ## PROGRESS
 ```
