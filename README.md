@@ -1,9 +1,10 @@
 # ft_printf
 42Cursus-ft_printf/42Lisboa
 
- ![Mandatory](progress/mandatory.png)
- ![Mandatory](progress/bonus_part1.png)
- ![Mandatory](progress/bonus_part2.png)
+ ![Mandatory](progress/Screen Shot 2021-03-19 at 7.26.43 PM.png)
+ ![Mandatory](progress/Screen Shot 2021-03-19 at 7.26.59 PM.png)
+ ![Mandatory](progress/Screen Shot 2021-03-19 at 7.27.13 PM.png)
+ ![Mandatory](progress/Screen Shot 2021-03-19 at 7.27.35 PM.png)
 
 ## PROGRESS
 ```
