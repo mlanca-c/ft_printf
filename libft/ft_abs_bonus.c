@@ -6,13 +6,13 @@
 /*   By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/16 12:17:07 by mlanca-c          #+#    #+#             */
-/*   Updated: 2021/03/16 12:18:05 by mlanca-c         ###   ########.fr       */
+/*   Updated: 2021/03/27 22:03:16 by mlanca-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_abs(int n)
+int	ft_abs(int n)
 {
 	if (n < 0)
 		return (-n);

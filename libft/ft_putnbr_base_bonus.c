@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
+/*   ft_putnbr_base_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/05 12:09:33 by mlanca-c          #+#    #+#             */
-/*   Updated: 2021/03/10 13:06:34 by mlanca-c         ###   ########.fr       */
+/*   Updated: 2021/03/28 14:07:04 by mlanca-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static int	base_check(char *str)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	if (ft_strlen(str) <= 1)
 		return (0);
@@ -23,8 +23,8 @@ static int	base_check(char *str)
 	while (str[i])
 	{
 		if (!(str[i] >= 'A' && str[i] <= 'Z')
-				&& !(str[i] >= 'a' && str[i] <= 'z')
-					&& !(str[i] >= '0' && str[i] <= '9'))
+			&& !(str[i] >= 'a' && str[i] <= 'z')
+			&& !(str[i] >= '0' && str[i] <= '9'))
 			return (0);
 		j = i + 1;
 		while (str[j])
@@ -38,7 +38,7 @@ static int	base_check(char *str)
 	return (1);
 }
 
-void		ft_putnbr_base(unsigned long nbr, char *base, int *bytes)
+void	ft_putnbr_base(unsigned long nbr, char *base, int *bytes)
 {
 	int	b;
 
@@ -59,7 +59,7 @@ void		ft_putnbr_base(unsigned long nbr, char *base, int *bytes)
 	}
 }
 
-int			ft_putnbr_base_int(unsigned long nbr, char *base)
+int	ft_putnbr_base_int(unsigned long nbr, char *base)
 {
 	int	bytes;
 

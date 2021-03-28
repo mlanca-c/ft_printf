@@ -6,7 +6,7 @@
 /*   By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/11 19:00:54 by mlanca-c          #+#    #+#             */
-/*   Updated: 2021/03/18 17:08:42 by mlanca-c         ###   ########.fr       */
+/*   Updated: 2021/03/28 16:51:44 by mlanca-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,7 @@ char		*ft_llitoa(long long n);
 long long	ft_power(int nb, int power);
 char		*ft_ftoa(long double d, int precision);
 int			ft_abs(int n);
+int			ft_iseven(int n);
+char		*ft_roundup_number(char *nbr);
 
 #endif

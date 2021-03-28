@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_litoa_base_bonus.c                              :+:      :+:    :+:   */
+/*   ft_llitoa_base_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/13 21:01:01 by mlanca-c          #+#    #+#             */
-/*   Updated: 2021/03/16 11:51:05 by mlanca-c         ###   ########.fr       */
+/*   Updated: 2021/03/28 15:50:39 by mlanca-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static int	base_check(char *str)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	if (ft_strlen(str) <= 1)
 		return (0);
@@ -23,8 +23,8 @@ static int	base_check(char *str)
 	while (str[i])
 	{
 		if (!(str[i] >= 'A' && str[i] <= 'Z')
-				&& !(str[i] >= 'a' && str[i] <= 'z')
-					&& !(str[i] >= '0' && str[i] <= '9'))
+			&& !(str[i] >= 'a' && str[i] <= 'z')
+			&& !(str[i] >= '0' && str[i] <= '9'))
 			return (0);
 		j = i + 1;
 		while (str[j])
@@ -53,23 +53,22 @@ static int	get_l(unsigned long n, int b)
 	return (l);
 }
 
-char		*ft_llitoa_base(unsigned long long n, char *base)
+char	*ft_llitoa_base(unsigned long long n, char *base)
 {
 	int		b;
 	int		len;
 	char	*nbr;
 
-	if (!(b = base_check(base)))
+	b = base_check(base);
+	if (!b)
 		return (NULL);
 	len = get_l(n, b);
-	if (!(nbr = (char *)malloc(sizeof(char) * (len + 1))))
+	nbr = (char *)malloc(sizeof(char) * (len + 1));
+	if (!nbr)
 		return (NULL);
 	nbr[len] = '\0';
 	if (n == 0)
-	{
 		nbr[0] = base[0];
-		return (nbr);
-	}
 	while (len > 0)
 	{
 		nbr[--len] = base[n % b];
