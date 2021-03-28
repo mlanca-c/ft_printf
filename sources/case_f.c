@@ -6,7 +6,7 @@
 /*   By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/15 12:37:55 by mlanca-c          #+#    #+#             */
-/*   Updated: 2021/03/18 19:15:47 by mlanca-c         ###   ########.fr       */
+/*   Updated: 2021/03/28 20:35:19 by mlanca-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,17 @@ static void	handle_precision(t_flags *flags, double d)
 
 static char	*handle_zero(t_flags *flags, char *d, int *count)
 {
-	if (!(ft_strncmp("inf", d, 3)) || (!(ft_strncmp("-inf", d, 4)) 
-				|| (!(ft_strncmp("nan", d, 3)))))
+	char	*temp;
+
+	if (!(ft_strncmp("inf", d, 3)) || (!(ft_strncmp("-inf", d, 4))
+		|| (!(ft_strncmp("nan", d, 3)))))
 			flags->zero = 0; 
 	else if (d[0] == '-' && flags->zero)
 	{
 		*count += ft_putchar('-');
-		d = ft_free_function("ft_substr", d, 1, (int)ft_strlen(d));
+		temp = d;
+		d = ft_substr(d, 1, (int)ft_strlen(d));
+		free(temp);
 		flags->min_width -= 1;
 	}
 	else if (flags->space && flags->zero)
@@ -44,18 +48,17 @@ static char	*handle_zero(t_flags *flags, char *d, int *count)
 	return (d);
 }
 
-int			case_f(t_flags *flags, va_list args)
+int	case_f(t_flags *flags, va_list args)
 {
-	int		count;
-	char	*d;
-	double	n;
+	int			count;
+	char		*d;
+	long double	n;
 
 	count = 0;
 	n = va_arg(args, double);
 	handle_precision(flags, n);
 	d = ft_ftoa(n, flags->precision);
 	d = handle_zero(flags, d, &count);
-	d = handle_double(flags, d);
 	if (flags->minus && flags->min_width)
 	{
 		count += ft_putstr(d);
