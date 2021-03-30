@@ -6,28 +6,11 @@
 /*   By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 15:03:39 by mlanca-c          #+#    #+#             */
-/*   Updated: 2021/03/15 15:29:18 by mlanca-c         ###   ########.fr       */
+/*   Updated: 2021/03/30 11:01:37 by mlanca-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/ft_printf.h"
-
-//APAGAR e remover o include <stdio.h> do header
-void	print_flags(t_flags *flags)
-{
-	printf("\nminus: %d\n", flags->minus);
-	printf("zero: %d\n", flags->zero);
-	printf("star: %d\n", flags->star);
-	printf("width: %d\n", flags->min_width);
-	printf("point: %d\n", flags->point);
-	printf("precision: %d\n", flags->precision);
-	printf("hash: %d\n", flags->hash);
-	printf("space: %d\n", flags->space);
-	printf("plus: %d\n", flags->plus);
-	printf("l: %d\n", flags->l);
-	printf("h: %d\n", flags->h);
-	printf("type: %c\n", flags->type);
-}
 
 t_flags	init(void)
 {
@@ -48,7 +31,7 @@ t_flags	init(void)
 	return (flags);
 }
 
-int		check_format(char *input, va_list args)
+int	check_format(char *input, va_list args)
 {
 	int		count;
 	int		i;
@@ -65,7 +48,6 @@ int		check_format(char *input, va_list args)
 		{
 			i += set_params(&input[i], &flags, args);
 			count += get_case(&flags, args, &count);
-			//print_flags(&flags);
 		}
 		else
 			count += ft_putchar(input[i]);
@@ -74,13 +56,14 @@ int		check_format(char *input, va_list args)
 	return (count);
 }
 
-int		ft_printf(const char *fmt, ...)
+int	ft_printf(const char *fmt, ...)
 {
 	va_list	args;
 	int		count;
 	char	*input;
 
-	if (!(input = ft_strdup(fmt)))
+	input = ft_strdup(fmt);
+	if (!input)
 		return (0);
 	va_start(args, fmt);
 	count = check_format(input, args);
