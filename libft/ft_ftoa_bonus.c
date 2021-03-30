@@ -6,29 +6,39 @@
 /*   By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/18 14:38:28 by mlanca-c          #+#    #+#             */
-/*   Updated: 2021/03/28 19:59:21 by mlanca-c         ###   ########.fr       */
+/*   Updated: 2021/03/30 10:06:41 by mlanca-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*get_dec(long double d, int precision, char *integral)
+long double	ft_remainder(long double numer, long double denom)
 {
-	char		*decimal;
-	char		*temp;
-	long double	value;
+	if (numer < 0)
+		numer *= -1;
+	return (numer - (denom * (long long)(numer / denom)));
+}
 
-	value = d - (long long int)d;
-	value *= ft_power(10, precision + 2);
-	decimal = ft_llitoa_base(value + 0.5, "0123456789");
-	temp = decimal;
-	decimal = ft_substr(decimal, 0, (int)ft_strlen(decimal) - 2);
-	free(temp);
-	while ((int)ft_strlen(decimal) < precision)
-		decimal = ft_free_function("ft_strjoin", "0", decimal, 2);
-	temp = decimal;
-	decimal = ft_free_function("ft_strjoin", integral, decimal, 1);
-	free(temp);
+static char	*get_dec(long double d, int precision, char *decimal)
+{
+	int		len;
+	int		p;
+
+	p = precision;
+	while (p-- > 0)
+		decimal = ft_free_function("ft_strjoin", decimal, "0", 1);
+	len = (int)ft_strlen(decimal) - 1;
+	while (precision-- > 0)
+	{
+		if (d == -9223372036854775808 || d >= 9223372036854775807
+			|| !ft_remainder(d, 1))
+			decimal[len - precision] = '0';
+		else
+		{
+			d *= 10;
+			decimal[len - precision] = (long long int)d % 10 + '0';
+		}
+	}
 	return (decimal);
 }
 
