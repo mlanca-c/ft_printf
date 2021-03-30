@@ -6,13 +6,13 @@
 /*   By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/15 12:38:29 by mlanca-c          #+#    #+#             */
-/*   Updated: 2021/03/15 16:06:39 by mlanca-c         ###   ########.fr       */
+/*   Updated: 2021/03/30 10:53:00 by mlanca-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-int		case_g(t_flags *flags, va_list args)
+int	case_g(t_flags *flags, va_list args)
 {
 	int		count;
 

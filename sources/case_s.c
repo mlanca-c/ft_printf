@@ -6,7 +6,7 @@
 /*   By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/11 19:52:01 by mlanca-c          #+#    #+#             */
-/*   Updated: 2021/03/13 19:08:16 by mlanca-c         ###   ########.fr       */
+/*   Updated: 2021/03/30 10:53:40 by mlanca-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static char	*handle_precision(t_flags *flags, char *s)
 	return (s);
 }
 
-int			case_s(t_flags *flags, va_list args)
+int	case_s(t_flags *flags, va_list args)
 {
 	int		count;
 	char	*s;

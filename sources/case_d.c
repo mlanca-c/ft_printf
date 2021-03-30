@@ -6,13 +6,13 @@
 /*   By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/13 15:19:20 by mlanca-c          #+#    #+#             */
-/*   Updated: 2021/03/18 17:39:49 by mlanca-c         ###   ########.fr       */
+/*   Updated: 2021/03/30 10:51:02 by mlanca-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-static char		*handle_zero(t_flags *flags, char *nbr, int *count)
+static char	*handle_zero(t_flags *flags, char *nbr, int *count)
 {
 	if (flags->point)
 		flags->zero = 0;
@@ -35,7 +35,7 @@ static char		*handle_zero(t_flags *flags, char *nbr, int *count)
 	return (nbr);
 }
 
-int				case_d(t_flags *flags, va_list args)
+int	case_d(t_flags *flags, va_list args)
 {
 	int		count;
 	char	*nbr;

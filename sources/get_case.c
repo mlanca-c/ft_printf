@@ -6,13 +6,13 @@
 /*   By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 19:18:57 by mlanca-c          #+#    #+#             */
-/*   Updated: 2021/03/15 16:24:26 by mlanca-c         ###   ########.fr       */
+/*   Updated: 2021/03/30 10:53:55 by mlanca-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-int		get_case(t_flags *flags, va_list args, int *count)
+int	get_case(t_flags *flags, va_list args, int *count)
 {
 	if (flags->type == 'c')
 		return (case_c(flags, args));

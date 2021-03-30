@@ -6,7 +6,7 @@
 /*   By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/11 19:53:17 by mlanca-c          #+#    #+#             */
-/*   Updated: 2021/03/13 20:57:25 by mlanca-c         ###   ########.fr       */
+/*   Updated: 2021/03/30 10:53:29 by mlanca-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*append_ptr(char *ptr)
 	return (ptr);
 }
 
-int		case_p(t_flags *flags, va_list args)
+int	case_p(t_flags *flags, va_list args)
 {
 	int		count;
 	char	*ptr;

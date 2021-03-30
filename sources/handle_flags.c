@@ -6,7 +6,7 @@
 /*   By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/15 13:02:40 by mlanca-c          #+#    #+#             */
-/*   Updated: 2021/03/15 15:28:43 by mlanca-c         ###   ########.fr       */
+/*   Updated: 2021/03/30 10:56:57 by mlanca-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	handle_star(t_flags *flags, int arg)
 	flags->star += 1;
 }
 
-int		handle_digit(t_flags *flags, char *input)
+int	handle_digit(t_flags *flags, char *input)
 {
 	int		i;
 
@@ -44,6 +44,17 @@ void	handle_minus(t_flags *flags)
 	}
 	if (flags->minus && flags->zero)
 		flags->zero = 0;
+	if (flags->space && flags->plus)
+		flags->space = 0;
+	if (!(flags->type == 'd' || flags->type == 'i'
+			|| flags->type == 'u' || flags->type == 'x'
+			||flags->type == 'X' || flags->type == 'o'))
+		flags->h = 0;
+	if (!(flags->type == 'd' || flags->type == 'i'
+			|| flags->type == 'u' || flags->type == 'x'
+			||flags->type == 'X' || flags->type == 's'
+			|| flags->type == 'c' || flags->type == 'o'))
+		flags->l = 0;
 }
 
 void	handle_flags(char input, t_flags *flags, va_list args)
@@ -64,12 +75,12 @@ void	handle_flags(char input, t_flags *flags, va_list args)
 		flags->plus = 1;
 }
 
-int		handle_lh(char *input, t_flags *flags)
+int	handle_lh(char *input, t_flags *flags)
 {
 	int		i;
 
 	i = 0;
-	if (input[i] == 'l')
+	if (input[i] == 'l' && !flags->l && !flags->h)
 	{
 		if (input[i + 1] == 'l')
 		{
@@ -78,7 +89,7 @@ int		handle_lh(char *input, t_flags *flags)
 		}
 		flags->l += 1;
 	}
-	else if (input[i] == 'h')
+	else if (input[i] == 'h' && !flags->h && !flags->l)
 	{
 		if (input[i + 1] == 'h')
 		{

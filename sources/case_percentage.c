@@ -6,13 +6,13 @@
 /*   By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/11 19:46:40 by mlanca-c          #+#    #+#             */
-/*   Updated: 2021/03/12 14:18:52 by mlanca-c         ###   ########.fr       */
+/*   Updated: 2021/03/30 10:53:33 by mlanca-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-int		case_percentage(t_flags *flags)
+int	case_percentage(t_flags *flags)
 {
 	int		count;
 
