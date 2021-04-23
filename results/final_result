@@ -1,0 +1,913 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+c1r17s1.42lisboa.com
+Darwin 19.6.0 x86_64
+$> date
+Fri Apr 23 17:35:37 WEST 2021
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/c++/4.2.1
+Apple clang version 12.0.0 (clang-1200.0.32.29)
+Target: x86_64-apple-darwin19.6.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple clang version 12.0.0 (clang-1200.0.32.29)
+Target: x86_64-apple-darwin19.6.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: git@vogsphere.42lisboa.com:vogsphere/intra-uuid-310e5930-f400-42ec-a5d2-e12fd26edb08-3551081
+
+= Git history ==================================================================
+$> git -C /tmp/tmp5ZX8_L/user log --pretty='%H - %an, %ad : %s'
+ae9beb86f0220c932d766055b452c80df4b6885b - MLSTT, Fri Apr 23 16:19:17 2021 +0100 : Update libft
+52676d2c0b782a765e8034afdd65511185d8d0b7 - MLSTT, Fri Apr 23 16:09:47 2021 +0100 : Update libft
+1cedcd2a5a8105f53e7efe094a6e0506e7f063f7 - MLSTT, Fri Apr 23 15:56:39 2021 +0100 : Update sources
+fe7eed836afb8fa1503e3da97985884ce1964ca7 - MLSTT, Fri Apr 23 15:54:37 2021 +0100 : Update libtf
+9e34f78ee25d14d508d5e982d383e3d7cb5f2f6a - MLSTT, Fri Apr 23 15:54:22 2021 +0100 : Update includes
+2e57a3f590a57f27d96c82c8d1a9f93eb467bd68 - MLSTT, Fri Apr 23 15:54:08 2021 +0100 : Update sources
+48f77e5e7393f322b30995bb05378a0d11efefab - MLSTT, Fri Apr 23 15:53:51 2021 +0100 : Update ft_printf
+586f0b9af47e00d0a0d477405135f96ecf2e8c40 - MLSTT, Fri Apr 23 15:53:37 2021 +0100 : Update Makefile
+
+= Collected files ==========================================
+$> ls -lAR /tmp/tmp5ZX8_L/user
+total 32
+-rw-r--r--   1 root  wheel  1881 Apr 23 17:35 Makefile
+-rw-r--r--   1 root  wheel  6272 Apr 23 17:35 __GIT_HISTORY
+-rw-r--r--   1 root  wheel  1802 Apr 23 17:35 ft_printf.c
+drwxr-xr-x   3 root  wheel    96 Apr 23 17:35 includes
+drwxr-xr-x  62 root  wheel  1984 Apr 23 17:35 libft
+drwxr-xr-x  21 root  wheel   672 Apr 23 17:35 sources
+
+/tmp/tmp5ZX8_L/user/includes:
+total 8
+-rw-r--r--  1 root  wheel  2424 Apr 23 17:35 ft_printf.h
+
+/tmp/tmp5ZX8_L/user/libft:
+total 480
+-rw-r--r--  1 root  wheel  2797 Apr 23 17:35 Makefile
+-rw-r--r--  1 root  wheel   974 Apr 23 17:35 ft_abs_bonus.c
+-rw-r--r--  1 root  wheel  1409 Apr 23 17:35 ft_atoi.c
+-rw-r--r--  1 root  wheel  1026 Apr 23 17:35 ft_bzero.c
+-rw-r--r--  1 root  wheel  1086 Apr 23 17:35 ft_calloc.c
+-rw-r--r--  1 root  wheel  1575 Apr 23 17:35 ft_free_function_bonus.c
+-rw-r--r--  1 root  wheel  2523 Apr 23 17:35 ft_ftoa_bonus.c
+-rw-r--r--  1 root  wheel  1050 Apr 23 17:35 ft_isalnum.c
+-rw-r--r--  1 root  wheel  1020 Apr 23 17:35 ft_isalpha.c
+-rw-r--r--  1 root  wheel   990 Apr 23 17:35 ft_isascii.c
+-rw-r--r--  1 root  wheel   992 Apr 23 17:35 ft_isdigit.c
+-rw-r--r--  1 root  wheel    89 Apr 23 17:35 ft_iseven_bonus.c
+-rw-r--r--  1 root  wheel   990 Apr 23 17:35 ft_isprint.c
+-rw-r--r--  1 root  wheel  1420 Apr 23 17:35 ft_itoa.c
+-rw-r--r--  1 root  wheel  1778 Apr 23 17:35 ft_itoa_base_bonus.c
+-rw-r--r--  1 root  wheel  1787 Apr 23 17:35 ft_llitoa_base_bonus.c
+-rw-r--r--  1 root  wheel  1457 Apr 23 17:35 ft_llitoa_bonus.c
+-rw-r--r--  1 root  wheel  1089 Apr 23 17:35 ft_lstadd_back.c
+-rw-r--r--  1 root  wheel  1026 Apr 23 17:35 ft_lstadd_front.c
+-rw-r--r--  1 root  wheel  1112 Apr 23 17:35 ft_lstclear.c
+-rw-r--r--  1 root  wheel  1033 Apr 23 17:35 ft_lstdelone.c
+-rw-r--r--  1 root  wheel  1049 Apr 23 17:35 ft_lstiter.c
+-rw-r--r--  1 root  wheel  1029 Apr 23 17:35 ft_lstlast.c
+-rw-r--r--  1 root  wheel  1303 Apr 23 17:35 ft_lstmap.c
+-rw-r--r--  1 root  wheel  1096 Apr 23 17:35 ft_lstnew.c
+-rw-r--r--  1 root  wheel  1031 Apr 23 17:35 ft_lstsize.c
+-rw-r--r--  1 root  wheel  1237 Apr 23 17:35 ft_memccpy.c
+-rw-r--r--  1 root  wheel  1115 Apr 23 17:35 ft_memchr.c
+-rw-r--r--  1 root  wheel  1193 Apr 23 17:35 ft_memcmp.c
+-rw-r--r--  1 root  wheel  1127 Apr 23 17:35 ft_memcpy.c
+-rw-r--r--  1 root  wheel  1304 Apr 23 17:35 ft_memmove.c
+-rw-r--r--  1 root  wheel  1060 Apr 23 17:35 ft_memset.c
+-rw-r--r--  1 root  wheel  1074 Apr 23 17:35 ft_power_bonus.c
+-rw-r--r--  1 root  wheel   970 Apr 23 17:35 ft_putchar_bonus.c
+-rw-r--r--  1 root  wheel   970 Apr 23 17:35 ft_putchar_fd.c
+-rw-r--r--  1 root  wheel  1030 Apr 23 17:35 ft_putendl_fd.c
+-rw-r--r--  1 root  wheel  1792 Apr 23 17:35 ft_putnbr_base_bonus.c
+-rw-r--r--  1 root  wheel  1055 Apr 23 17:35 ft_putnbr_bonus.c
+-rw-r--r--  1 root  wheel  1189 Apr 23 17:35 ft_putnbr_fd.c
+-rw-r--r--  1 root  wheel   995 Apr 23 17:35 ft_putstr_bonus.c
+-rw-r--r--  1 root  wheel  1031 Apr 23 17:35 ft_putstr_fd.c
+-rw-r--r--  1 root  wheel  1026 Apr 23 17:35 ft_putstr_len_bonus.c
+-rw-r--r--  1 root  wheel   817 Apr 23 17:35 ft_roundup_number_bonus.c
+-rw-r--r--  1 root  wheel  2039 Apr 23 17:35 ft_split.c
+-rw-r--r--  1 root  wheel   999 Apr 23 17:35 ft_strchr.c
+-rw-r--r--  1 root  wheel  1177 Apr 23 17:35 ft_strdup.c
+-rw-r--r--  1 root  wheel  1292 Apr 23 17:35 ft_strjoin.c
+-rw-r--r--  1 root  wheel  1201 Apr 23 17:35 ft_strlcat.c
+-rw-r--r--  1 root  wheel  1239 Apr 23 17:35 ft_strlcpy.c
+-rw-r--r--  1 root  wheel  1002 Apr 23 17:35 ft_strlen.c
+-rw-r--r--  1 root  wheel  1208 Apr 23 17:35 ft_strmapi.c
+-rw-r--r--  1 root  wheel  1154 Apr 23 17:35 ft_strncmp.c
+-rw-r--r--  1 root  wheel  1269 Apr 23 17:35 ft_strnstr.c
+-rw-r--r--  1 root  wheel  1159 Apr 23 17:35 ft_strrchr.c
+-rw-r--r--  1 root  wheel  1372 Apr 23 17:35 ft_strtrim.c
+-rw-r--r--  1 root  wheel  1405 Apr 23 17:35 ft_substr.c
+-rw-r--r--  1 root  wheel   989 Apr 23 17:35 ft_tolower.c
+-rw-r--r--  1 root  wheel   989 Apr 23 17:35 ft_toupper.c
+-rw-r--r--  1 root  wheel  2937 Apr 23 17:35 libft.h
+-rw-r--r--  1 root  wheel  1591 Apr 23 17:35 libft_bonus.h
+
+/tmp/tmp5ZX8_L/user/sources:
+total 152
+-rw-r--r--  1 root  wheel  4074 Apr 23 17:35 arg_conversions.c
+-rw-r--r--  1 root  wheel  1285 Apr 23 17:35 case_c.c
+-rw-r--r--  1 root  wheel  1898 Apr 23 17:35 case_d.c
+-rw-r--r--  1 root  wheel  1056 Apr 23 17:35 case_e.c
+-rw-r--r--  1 root  wheel  2175 Apr 23 17:35 case_f.c
+-rw-r--r--  1 root  wheel  1056 Apr 23 17:35 case_g.c
+-rw-r--r--  1 root  wheel  1338 Apr 23 17:35 case_n.c
+-rw-r--r--  1 root  wheel  1795 Apr 23 17:35 case_o.c
+-rw-r--r--  1 root  wheel  1551 Apr 23 17:35 case_p.c
+-rw-r--r--  1 root  wheel  1238 Apr 23 17:35 case_percentage.c
+-rw-r--r--  1 root  wheel  1644 Apr 23 17:35 case_s.c
+-rw-r--r--  1 root  wheel  1399 Apr 23 17:35 case_u.c
+-rw-r--r--  1 root  wheel  1946 Apr 23 17:35 case_x.c
+-rw-r--r--  1 root  wheel  1781 Apr 23 17:35 get_case.c
+-rw-r--r--  1 root  wheel  1160 Apr 23 17:35 handle_double.c
+-rw-r--r--  1 root  wheel  2638 Apr 23 17:35 handle_flags.c
+-rw-r--r--  1 root  wheel  2971 Apr 23 17:35 handle_number.c
+-rw-r--r--  1 root  wheel  1160 Apr 23 17:35 handle_width.c
+-rw-r--r--  1 root  wheel  1632 Apr 23 17:35 set_params.c
+
+= test_spdxiucpercent ==========================================================
+$> /usr/bin/norminette  libft/ft_strlcpy.c libft/ft_isalpha.c sources/handle_flags.c case_o.c libft/ft_abs_bonus.c ft_itoa.c libft/ft_memchr.c libft/ft_tolower.c ft_strlcpy.c libft/ft_free_function_bonus.c ft_power_bonus.c libft/ft_power_bonus.c ft_putstr_bonus.c case_c.c libft/ft_strjoin.c ft_strjoin.c sources/case_c.c sources/case_d.c ft_strlcat.c libft/ft_substr.c handle_number.c libft/ft_putnbr_base_bonus.c sources/case_f.c case_p.c sources/handle_width.c ft_isalnum.c ft_substr.c ft_free_function_bonus.c ft_memcmp.c ft_roundup_number_bonus.c sources/case_u.c libft/ft_memccpy.c ft_putendl_fd.c ft_isprint.c ft_bzero.c libft/ft_lstadd_back.c ft_ftoa_bonus.c libft/ft_isdigit.c set_params.c libft/ft_putchar_bonus.c libft/ft_lstdelone.c case_n.c case_g.c libft/ft_putendl_fd.c ft_putstr_fd.c libft/ft_atoi.c case_f.c libft/ft_itoa_base_bonus.c ft_putstr_len_bonus.c ft_itoa_base_bonus.c libft/ft_lstiter.c arg_conversions.c libft/ft_isalnum.c libft/ft_lstmap.c libft/ft_strtrim.c ft_iseven_
+ bonus.c ft_memccpy.c ft_lstnew.c ft_lstdelone.c libft/ft_strchr.c libft/ft_lstnew.c case_u.c libft/ft_memcpy.c sources/case_e.c libft/libft.h case_e.c sources/handle_number.c ft_abs_bonus.c libft/ft_llitoa_bonus.c libft/ft_putchar_fd.c libft/ft_putnbr_fd.c libft/ft_putstr_len_bonus.c libft_bonus.h sources/arg_conversions.c ft_putnbr_bonus.c ft_memmove.c libft/ft_lstadd_front.c ft_llitoa_bonus.c libft/ft_strdup.c libft/ft_roundup_number_bonus.c libft/ft_toupper.c libft/ft_bzero.c sources/case_x.c ft_llitoa_base_bonus.c ft_memchr.c ft_memcpy.c ft_lstiter.c libft/ft_itoa.c libft/ft_putstr_bonus.c libft/ft_memmove.c case_s.c handle_double.c ft_isalpha.c ft_strmapi.c sources/case_percentage.c ft_lstmap.c ft_strchr.c handle_flags.c ft_lstadd_back.c sources/case_n.c libft/ft_isprint.c libft/ft_strrchr.c libft/ft_ftoa_bonus.c libft.h libft/ft_strlcat.c libft/libft_bonus.h ft_strrchr.c libft/ft_llitoa_base_bonus.c sources/case_g.c case_percentage.c case_d.c libft/ft_isascii.c ft_strlen.c lib
+ ft/ft_lstsize.c sources/case_p.c get_case.c ft_strncmp.c ft_strnstr.c sources/get_case.c ft_tolower.c libft/ft_strmapi.c libft/ft_calloc.c sources/handle_double.c libft/ft_strlen.c ft_putchar_bonus.c ft_printf.h libft/ft_memset.c ft_putchar_fd.c ft_printf.c ft_strtrim.c libft/ft_strnstr.c ft_putnbr_fd.c sources/case_o.c ft_split.c libft/ft_lstclear.c libft/ft_lstlast.c libft/ft_split.c libft/ft_putstr_fd.c handle_width.c ft_lstclear.c ft_lstadd_front.c case_x.c ft_memset.c ft_lstlast.c ft_atoi.c libft/ft_iseven_bonus.c ft_isascii.c includes/ft_printf.h ft_toupper.c ft_isdigit.c libft/ft_putnbr_bonus.c ft_strdup.c ft_lstsize.c sources/set_params.c libft/ft_memcmp.c ft_putnbr_base_bonus.c sources/case_s.c libft/ft_strncmp.c ft_calloc.c | grep -E '^(Error|Warning)'
+
+/Library/Developer/CommandLineTools/usr/bin/make clean -C ./libft
+rm -f ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o ft_memchr.o ft_memcmp.o ft_strlen.o ft_strlcpy.o ft_strlcat.o ft_strchr.o ft_strrchr.o ft_strnstr.o ft_strncmp.o ft_atoi.o ft_isalpha.o ft_isdigit.o ft_isalnum.o ft_isascii.o ft_isprint.o ft_toupper.o ft_tolower.o ft_calloc.o ft_strdup.o ft_substr.o ft_strjoin.o ft_strtrim.o ft_split.o ft_itoa.o ft_strmapi.o ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_lstnew.o ft_lstadd_front.o ft_lstsize.o ft_lstlast.o ft_lstadd_back.o ft_lstdelone.o ft_lstclear.o ft_lstiter.o ft_lstmap.o ft_putchar_bonus.o ft_putnbr_base_bonus.o ft_putstr_bonus.o ft_putstr_len_bonus.o ft_putnbr_bonus.o ft_itoa_base_bonus.o ft_free_function_bonus.o ft_llitoa_base_bonus.o ft_llitoa_bonus.o ft_ftoa_bonus.o ft_power_bonus.o ft_iseven_bonus.o ft_abs_bonus.o ft_roundup_number_bonus.o
+rm -f ft_printf.o sources/set_params.o sources/handle_flags.o sources/get_case.o sources/case_c.o sources/case_s.o sources/case_percentage.o sources/case_p.o sources/case_d.o sources/case_u.o sources/case_x.o sources/case_percentage.o sources/case_n.o sources/case_f.o sources/case_g.o sources/case_e.o sources/case_o.o sources/handle_width.o sources/arg_conversions.o sources/handle_number.o sources/handle_double.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c ft_printf.c -o ft_printf.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/set_params.c -o sources/set_params.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/handle_flags.c -o sources/handle_flags.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/get_case.c -o sources/get_case.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_c.c -o sources/case_c.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_s.c -o sources/case_s.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_percentage.c -o sources/case_percentage.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_p.c -o sources/case_p.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_d.c -o sources/case_d.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_u.c -o sources/case_u.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_x.c -o sources/case_x.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_n.c -o sources/case_n.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_f.c -o sources/case_f.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_g.c -o sources/case_g.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_e.c -o sources/case_e.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_o.c -o sources/case_o.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/handle_width.c -o sources/handle_width.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/arg_conversions.c -o sources/arg_conversions.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/handle_number.c -o sources/handle_number.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/handle_double.c -o sources/handle_double.o
+/Library/Developer/CommandLineTools/usr/bin/make bonus -C ./libft
+gcc -Wall -Wextra -Werror -c ft_memset.c -o ft_memset.o -I .
+gcc -Wall -Wextra -Werror -c ft_bzero.c -o ft_bzero.o -I .
+gcc -Wall -Wextra -Werror -c ft_memcpy.c -o ft_memcpy.o -I .
+gcc -Wall -Wextra -Werror -c ft_memccpy.c -o ft_memccpy.o -I .
+gcc -Wall -Wextra -Werror -c ft_memmove.c -o ft_memmove.o -I .
+gcc -Wall -Wextra -Werror -c ft_memchr.c -o ft_memchr.o -I .
+gcc -Wall -Wextra -Werror -c ft_memcmp.c -o ft_memcmp.o -I .
+gcc -Wall -Wextra -Werror -c ft_strlen.c -o ft_strlen.o -I .
+gcc -Wall -Wextra -Werror -c ft_strlcpy.c -o ft_strlcpy.o -I .
+gcc -Wall -Wextra -Werror -c ft_strlcat.c -o ft_strlcat.o -I .
+gcc -Wall -Wextra -Werror -c ft_strchr.c -o ft_strchr.o -I .
+gcc -Wall -Wextra -Werror -c ft_strrchr.c -o ft_strrchr.o -I .
+gcc -Wall -Wextra -Werror -c ft_strnstr.c -o ft_strnstr.o -I .
+gcc -Wall -Wextra -Werror -c ft_strncmp.c -o ft_strncmp.o -I .
+gcc -Wall -Wextra -Werror -c ft_atoi.c -o ft_atoi.o -I .
+gcc -Wall -Wextra -Werror -c ft_isalpha.c -o ft_isalpha.o -I .
+gcc -Wall -Wextra -Werror -c ft_isdigit.c -o ft_isdigit.o -I .
+gcc -Wall -Wextra -Werror -c ft_isalnum.c -o ft_isalnum.o -I .
+gcc -Wall -Wextra -Werror -c ft_isascii.c -o ft_isascii.o -I .
+gcc -Wall -Wextra -Werror -c ft_isprint.c -o ft_isprint.o -I .
+gcc -Wall -Wextra -Werror -c ft_toupper.c -o ft_toupper.o -I .
+gcc -Wall -Wextra -Werror -c ft_tolower.c -o ft_tolower.o -I .
+gcc -Wall -Wextra -Werror -c ft_calloc.c -o ft_calloc.o -I .
+gcc -Wall -Wextra -Werror -c ft_strdup.c -o ft_strdup.o -I .
+gcc -Wall -Wextra -Werror -c ft_substr.c -o ft_substr.o -I .
+gcc -Wall -Wextra -Werror -c ft_strjoin.c -o ft_strjoin.o -I .
+gcc -Wall -Wextra -Werror -c ft_strtrim.c -o ft_strtrim.o -I .
+gcc -Wall -Wextra -Werror -c ft_split.c -o ft_split.o -I .
+gcc -Wall -Wextra -Werror -c ft_itoa.c -o ft_itoa.o -I .
+gcc -Wall -Wextra -Werror -c ft_strmapi.c -o ft_strmapi.o -I .
+gcc -Wall -Wextra -Werror -c ft_putchar_fd.c -o ft_putchar_fd.o -I .
+gcc -Wall -Wextra -Werror -c ft_putstr_fd.c -o ft_putstr_fd.o -I .
+gcc -Wall -Wextra -Werror -c ft_putendl_fd.c -o ft_putendl_fd.o -I .
+gcc -Wall -Wextra -Werror -c ft_putnbr_fd.c -o ft_putnbr_fd.o -I .
+gcc -Wall -Wextra -Werror -c ft_putchar_bonus.c -o ft_putchar_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_putnbr_base_bonus.c -o ft_putnbr_base_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_putstr_bonus.c -o ft_putstr_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_putstr_len_bonus.c -o ft_putstr_len_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_putnbr_bonus.c -o ft_putnbr_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_itoa_base_bonus.c -o ft_itoa_base_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_free_function_bonus.c -o ft_free_function_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_llitoa_base_bonus.c -o ft_llitoa_base_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_llitoa_bonus.c -o ft_llitoa_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_ftoa_bonus.c -o ft_ftoa_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_power_bonus.c -o ft_power_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_iseven_bonus.c -o ft_iseven_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_abs_bonus.c -o ft_abs_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_roundup_number_bonus.c -o ft_roundup_number_bonus.o -I .
+ar -rc libft.a ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o ft_memchr.o ft_memcmp.o ft_strlen.o ft_strlcpy.o ft_strlcat.o ft_strchr.o ft_strrchr.o ft_strnstr.o ft_strncmp.o ft_atoi.o ft_isalpha.o ft_isdigit.o ft_isalnum.o ft_isascii.o ft_isprint.o ft_toupper.o ft_tolower.o ft_calloc.o ft_strdup.o ft_substr.o ft_strjoin.o ft_strtrim.o ft_split.o ft_itoa.o ft_strmapi.o ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_putchar_bonus.o ft_putnbr_base_bonus.o ft_putstr_bonus.o ft_putstr_len_bonus.o ft_putnbr_bonus.o ft_itoa_base_bonus.o ft_free_function_bonus.o ft_llitoa_base_bonus.o ft_llitoa_bonus.o ft_ftoa_bonus.o ft_power_bonus.o ft_iseven_bonus.o ft_abs_bonus.o ft_roundup_number_bonus.o
+gcc -Wall -Wextra -Werror -c ft_lstnew.c -o ft_lstnew.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstadd_front.c -o ft_lstadd_front.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstsize.c -o ft_lstsize.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstlast.c -o ft_lstlast.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstadd_back.c -o ft_lstadd_back.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstdelone.c -o ft_lstdelone.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstclear.c -o ft_lstclear.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstiter.c -o ft_lstiter.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstmap.c -o ft_lstmap.o -I .
+ar -rc libft.a ft_lstnew.o ft_lstadd_front.o ft_lstsize.o ft_lstlast.o ft_lstadd_back.o ft_lstdelone.o ft_lstclear.o ft_lstiter.o ft_lstmap.o
+cp ./libft/libft.a libftprintf.a
+ar -rc libftprintf.a ft_printf.o sources/set_params.o sources/handle_flags.o sources/get_case.o sources/case_c.o sources/case_s.o sources/case_percentage.o sources/case_p.o sources/case_d.o sources/case_u.o sources/case_x.o sources/case_percentage.o sources/case_n.o sources/case_f.o sources/case_g.o sources/case_e.o sources/case_o.o sources/handle_width.o sources/arg_conversions.o sources/handle_number.o sources/handle_double.o
+/Library/Developer/CommandLineTools/usr/bin/make clean -C ./libft
+rm -f ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o ft_memchr.o ft_memcmp.o ft_strlen.o ft_strlcpy.o ft_strlcat.o ft_strchr.o ft_strrchr.o ft_strnstr.o ft_strncmp.o ft_atoi.o ft_isalpha.o ft_isdigit.o ft_isalnum.o ft_isascii.o ft_isprint.o ft_toupper.o ft_tolower.o ft_calloc.o ft_strdup.o ft_substr.o ft_strjoin.o ft_strtrim.o ft_split.o ft_itoa.o ft_strmapi.o ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_lstnew.o ft_lstadd_front.o ft_lstsize.o ft_lstlast.o ft_lstadd_back.o ft_lstdelone.o ft_lstclear.o ft_lstiter.o ft_lstmap.o ft_putchar_bonus.o ft_putnbr_base_bonus.o ft_putstr_bonus.o ft_putstr_len_bonus.o ft_putnbr_bonus.o ft_itoa_base_bonus.o ft_free_function_bonus.o ft_llitoa_base_bonus.o ft_llitoa_bonus.o ft_ftoa_bonus.o ft_power_bonus.o ft_iseven_bonus.o ft_abs_bonus.o ft_roundup_number_bonus.o
+rm -f ft_printf.o sources/set_params.o sources/handle_flags.o sources/get_case.o sources/case_c.o sources/case_s.o sources/case_percentage.o sources/case_p.o sources/case_d.o sources/case_u.o sources/case_x.o sources/case_percentage.o sources/case_n.o sources/case_f.o sources/case_g.o sources/case_e.o sources/case_o.o sources/handle_width.o sources/arg_conversions.o sources/handle_number.o sources/handle_double.o
+/Library/Developer/CommandLineTools/usr/bin/make fclean -C ./libft
+rm -f ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o ft_memchr.o ft_memcmp.o ft_strlen.o ft_strlcpy.o ft_strlcat.o ft_strchr.o ft_strrchr.o ft_strnstr.o ft_strncmp.o ft_atoi.o ft_isalpha.o ft_isdigit.o ft_isalnum.o ft_isascii.o ft_isprint.o ft_toupper.o ft_tolower.o ft_calloc.o ft_strdup.o ft_substr.o ft_strjoin.o ft_strtrim.o ft_split.o ft_itoa.o ft_strmapi.o ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_lstnew.o ft_lstadd_front.o ft_lstsize.o ft_lstlast.o ft_lstadd_back.o ft_lstdelone.o ft_lstclear.o ft_lstiter.o ft_lstmap.o ft_putchar_bonus.o ft_putnbr_base_bonus.o ft_putstr_bonus.o ft_putstr_len_bonus.o ft_putnbr_bonus.o ft_itoa_base_bonus.o ft_free_function_bonus.o ft_llitoa_base_bonus.o ft_llitoa_bonus.o ft_ftoa_bonus.o ft_power_bonus.o ft_iseven_bonus.o ft_abs_bonus.o ft_roundup_number_bonus.o
+rm -f libft.a
+rm -f libftprintf.a
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c ft_printf.c -o ft_printf.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/set_params.c -o sources/set_params.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/handle_flags.c -o sources/handle_flags.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/get_case.c -o sources/get_case.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_c.c -o sources/case_c.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_s.c -o sources/case_s.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_percentage.c -o sources/case_percentage.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_p.c -o sources/case_p.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_d.c -o sources/case_d.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_u.c -o sources/case_u.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_x.c -o sources/case_x.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_n.c -o sources/case_n.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_f.c -o sources/case_f.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_g.c -o sources/case_g.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_e.c -o sources/case_e.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_o.c -o sources/case_o.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/handle_width.c -o sources/handle_width.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/arg_conversions.c -o sources/arg_conversions.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/handle_number.c -o sources/handle_number.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/handle_double.c -o sources/handle_double.o
+/Library/Developer/CommandLineTools/usr/bin/make bonus -C ./libft
+gcc -Wall -Wextra -Werror -c ft_memset.c -o ft_memset.o -I .
+gcc -Wall -Wextra -Werror -c ft_bzero.c -o ft_bzero.o -I .
+gcc -Wall -Wextra -Werror -c ft_memcpy.c -o ft_memcpy.o -I .
+gcc -Wall -Wextra -Werror -c ft_memccpy.c -o ft_memccpy.o -I .
+gcc -Wall -Wextra -Werror -c ft_memmove.c -o ft_memmove.o -I .
+gcc -Wall -Wextra -Werror -c ft_memchr.c -o ft_memchr.o -I .
+gcc -Wall -Wextra -Werror -c ft_memcmp.c -o ft_memcmp.o -I .
+gcc -Wall -Wextra -Werror -c ft_strlen.c -o ft_strlen.o -I .
+gcc -Wall -Wextra -Werror -c ft_strlcpy.c -o ft_strlcpy.o -I .
+gcc -Wall -Wextra -Werror -c ft_strlcat.c -o ft_strlcat.o -I .
+gcc -Wall -Wextra -Werror -c ft_strchr.c -o ft_strchr.o -I .
+gcc -Wall -Wextra -Werror -c ft_strrchr.c -o ft_strrchr.o -I .
+gcc -Wall -Wextra -Werror -c ft_strnstr.c -o ft_strnstr.o -I .
+gcc -Wall -Wextra -Werror -c ft_strncmp.c -o ft_strncmp.o -I .
+gcc -Wall -Wextra -Werror -c ft_atoi.c -o ft_atoi.o -I .
+gcc -Wall -Wextra -Werror -c ft_isalpha.c -o ft_isalpha.o -I .
+gcc -Wall -Wextra -Werror -c ft_isdigit.c -o ft_isdigit.o -I .
+gcc -Wall -Wextra -Werror -c ft_isalnum.c -o ft_isalnum.o -I .
+gcc -Wall -Wextra -Werror -c ft_isascii.c -o ft_isascii.o -I .
+gcc -Wall -Wextra -Werror -c ft_isprint.c -o ft_isprint.o -I .
+gcc -Wall -Wextra -Werror -c ft_toupper.c -o ft_toupper.o -I .
+gcc -Wall -Wextra -Werror -c ft_tolower.c -o ft_tolower.o -I .
+gcc -Wall -Wextra -Werror -c ft_calloc.c -o ft_calloc.o -I .
+gcc -Wall -Wextra -Werror -c ft_strdup.c -o ft_strdup.o -I .
+gcc -Wall -Wextra -Werror -c ft_substr.c -o ft_substr.o -I .
+gcc -Wall -Wextra -Werror -c ft_strjoin.c -o ft_strjoin.o -I .
+gcc -Wall -Wextra -Werror -c ft_strtrim.c -o ft_strtrim.o -I .
+gcc -Wall -Wextra -Werror -c ft_split.c -o ft_split.o -I .
+gcc -Wall -Wextra -Werror -c ft_itoa.c -o ft_itoa.o -I .
+gcc -Wall -Wextra -Werror -c ft_strmapi.c -o ft_strmapi.o -I .
+gcc -Wall -Wextra -Werror -c ft_putchar_fd.c -o ft_putchar_fd.o -I .
+gcc -Wall -Wextra -Werror -c ft_putstr_fd.c -o ft_putstr_fd.o -I .
+gcc -Wall -Wextra -Werror -c ft_putendl_fd.c -o ft_putendl_fd.o -I .
+gcc -Wall -Wextra -Werror -c ft_putnbr_fd.c -o ft_putnbr_fd.o -I .
+gcc -Wall -Wextra -Werror -c ft_putchar_bonus.c -o ft_putchar_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_putnbr_base_bonus.c -o ft_putnbr_base_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_putstr_bonus.c -o ft_putstr_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_putstr_len_bonus.c -o ft_putstr_len_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_putnbr_bonus.c -o ft_putnbr_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_itoa_base_bonus.c -o ft_itoa_base_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_free_function_bonus.c -o ft_free_function_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_llitoa_base_bonus.c -o ft_llitoa_base_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_llitoa_bonus.c -o ft_llitoa_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_ftoa_bonus.c -o ft_ftoa_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_power_bonus.c -o ft_power_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_iseven_bonus.c -o ft_iseven_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_abs_bonus.c -o ft_abs_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_roundup_number_bonus.c -o ft_roundup_number_bonus.o -I .
+ar -rc libft.a ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o ft_memchr.o ft_memcmp.o ft_strlen.o ft_strlcpy.o ft_strlcat.o ft_strchr.o ft_strrchr.o ft_strnstr.o ft_strncmp.o ft_atoi.o ft_isalpha.o ft_isdigit.o ft_isalnum.o ft_isascii.o ft_isprint.o ft_toupper.o ft_tolower.o ft_calloc.o ft_strdup.o ft_substr.o ft_strjoin.o ft_strtrim.o ft_split.o ft_itoa.o ft_strmapi.o ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_putchar_bonus.o ft_putnbr_base_bonus.o ft_putstr_bonus.o ft_putstr_len_bonus.o ft_putnbr_bonus.o ft_itoa_base_bonus.o ft_free_function_bonus.o ft_llitoa_base_bonus.o ft_llitoa_bonus.o ft_ftoa_bonus.o ft_power_bonus.o ft_iseven_bonus.o ft_abs_bonus.o ft_roundup_number_bonus.o
+gcc -Wall -Wextra -Werror -c ft_lstnew.c -o ft_lstnew.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstadd_front.c -o ft_lstadd_front.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstsize.c -o ft_lstsize.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstlast.c -o ft_lstlast.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstadd_back.c -o ft_lstadd_back.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstdelone.c -o ft_lstdelone.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstclear.c -o ft_lstclear.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstiter.c -o ft_lstiter.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstmap.c -o ft_lstmap.o -I .
+ar -rc libft.a ft_lstnew.o ft_lstadd_front.o ft_lstsize.o ft_lstlast.o ft_lstadd_back.o ft_lstdelone.o ft_lstclear.o ft_lstiter.o ft_lstmap.o
+cp ./libft/libft.a libftprintf.a
+ar -rc libftprintf.a ft_printf.o sources/set_params.o sources/handle_flags.o sources/get_case.o sources/case_c.o sources/case_s.o sources/case_percentage.o sources/case_p.o sources/case_d.o sources/case_u.o sources/case_x.o sources/case_percentage.o sources/case_n.o sources/case_f.o sources/case_g.o sources/case_e.o sources/case_o.o sources/handle_width.o sources/arg_conversions.o sources/handle_number.o sources/handle_double.o
+/Library/Developer/CommandLineTools/usr/bin/make clean -C ./libft
+rm -f ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o ft_memchr.o ft_memcmp.o ft_strlen.o ft_strlcpy.o ft_strlcat.o ft_strchr.o ft_strrchr.o ft_strnstr.o ft_strncmp.o ft_atoi.o ft_isalpha.o ft_isdigit.o ft_isalnum.o ft_isascii.o ft_isprint.o ft_toupper.o ft_tolower.o ft_calloc.o ft_strdup.o ft_substr.o ft_strjoin.o ft_strtrim.o ft_split.o ft_itoa.o ft_strmapi.o ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_lstnew.o ft_lstadd_front.o ft_lstsize.o ft_lstlast.o ft_lstadd_back.o ft_lstdelone.o ft_lstclear.o ft_lstiter.o ft_lstmap.o ft_putchar_bonus.o ft_putnbr_base_bonus.o ft_putstr_bonus.o ft_putstr_len_bonus.o ft_putnbr_bonus.o ft_itoa_base_bonus.o ft_free_function_bonus.o ft_llitoa_base_bonus.o ft_llitoa_bonus.o ft_ftoa_bonus.o ft_power_bonus.o ft_iseven_bonus.o ft_abs_bonus.o ft_roundup_number_bonus.o
+rm -f ft_printf.o sources/set_params.o sources/handle_flags.o sources/get_case.o sources/case_c.o sources/case_s.o sources/case_percentage.o sources/case_p.o sources/case_d.o sources/case_u.o sources/case_x.o sources/case_percentage.o sources/case_n.o sources/case_f.o sources/case_g.o sources/case_e.o sources/case_o.o sources/handle_width.o sources/arg_conversions.o sources/handle_number.o sources/handle_double.o
+/Library/Developer/CommandLineTools/usr/bin/make fclean -C ./libft
+rm -f ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o ft_memchr.o ft_memcmp.o ft_strlen.o ft_strlcpy.o ft_strlcat.o ft_strchr.o ft_strrchr.o ft_strnstr.o ft_strncmp.o ft_atoi.o ft_isalpha.o ft_isdigit.o ft_isalnum.o ft_isascii.o ft_isprint.o ft_toupper.o ft_tolower.o ft_calloc.o ft_strdup.o ft_substr.o ft_strjoin.o ft_strtrim.o ft_split.o ft_itoa.o ft_strmapi.o ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_lstnew.o ft_lstadd_front.o ft_lstsize.o ft_lstlast.o ft_lstadd_back.o ft_lstdelone.o ft_lstclear.o ft_lstiter.o ft_lstmap.o ft_putchar_bonus.o ft_putnbr_base_bonus.o ft_putstr_bonus.o ft_putstr_len_bonus.o ft_putnbr_bonus.o ft_itoa_base_bonus.o ft_free_function_bonus.o ft_llitoa_base_bonus.o ft_llitoa_bonus.o ft_ftoa_bonus.o ft_power_bonus.o ft_iseven_bonus.o ft_abs_bonus.o ft_roundup_number_bonus.o
+rm -f libft.a
+rm -f libftprintf.a
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c ft_printf.c -o ft_printf.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/set_params.c -o sources/set_params.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/handle_flags.c -o sources/handle_flags.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/get_case.c -o sources/get_case.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_c.c -o sources/case_c.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_s.c -o sources/case_s.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_percentage.c -o sources/case_percentage.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_p.c -o sources/case_p.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_d.c -o sources/case_d.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_u.c -o sources/case_u.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_x.c -o sources/case_x.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_n.c -o sources/case_n.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_f.c -o sources/case_f.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_g.c -o sources/case_g.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_e.c -o sources/case_e.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_o.c -o sources/case_o.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/handle_width.c -o sources/handle_width.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/arg_conversions.c -o sources/arg_conversions.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/handle_number.c -o sources/handle_number.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/handle_double.c -o sources/handle_double.o
+/Library/Developer/CommandLineTools/usr/bin/make bonus -C ./libft
+gcc -Wall -Wextra -Werror -c ft_memset.c -o ft_memset.o -I .
+gcc -Wall -Wextra -Werror -c ft_bzero.c -o ft_bzero.o -I .
+gcc -Wall -Wextra -Werror -c ft_memcpy.c -o ft_memcpy.o -I .
+gcc -Wall -Wextra -Werror -c ft_memccpy.c -o ft_memccpy.o -I .
+gcc -Wall -Wextra -Werror -c ft_memmove.c -o ft_memmove.o -I .
+gcc -Wall -Wextra -Werror -c ft_memchr.c -o ft_memchr.o -I .
+gcc -Wall -Wextra -Werror -c ft_memcmp.c -o ft_memcmp.o -I .
+gcc -Wall -Wextra -Werror -c ft_strlen.c -o ft_strlen.o -I .
+gcc -Wall -Wextra -Werror -c ft_strlcpy.c -o ft_strlcpy.o -I .
+gcc -Wall -Wextra -Werror -c ft_strlcat.c -o ft_strlcat.o -I .
+gcc -Wall -Wextra -Werror -c ft_strchr.c -o ft_strchr.o -I .
+gcc -Wall -Wextra -Werror -c ft_strrchr.c -o ft_strrchr.o -I .
+gcc -Wall -Wextra -Werror -c ft_strnstr.c -o ft_strnstr.o -I .
+gcc -Wall -Wextra -Werror -c ft_strncmp.c -o ft_strncmp.o -I .
+gcc -Wall -Wextra -Werror -c ft_atoi.c -o ft_atoi.o -I .
+gcc -Wall -Wextra -Werror -c ft_isalpha.c -o ft_isalpha.o -I .
+gcc -Wall -Wextra -Werror -c ft_isdigit.c -o ft_isdigit.o -I .
+gcc -Wall -Wextra -Werror -c ft_isalnum.c -o ft_isalnum.o -I .
+gcc -Wall -Wextra -Werror -c ft_isascii.c -o ft_isascii.o -I .
+gcc -Wall -Wextra -Werror -c ft_isprint.c -o ft_isprint.o -I .
+gcc -Wall -Wextra -Werror -c ft_toupper.c -o ft_toupper.o -I .
+gcc -Wall -Wextra -Werror -c ft_tolower.c -o ft_tolower.o -I .
+gcc -Wall -Wextra -Werror -c ft_calloc.c -o ft_calloc.o -I .
+gcc -Wall -Wextra -Werror -c ft_strdup.c -o ft_strdup.o -I .
+gcc -Wall -Wextra -Werror -c ft_substr.c -o ft_substr.o -I .
+gcc -Wall -Wextra -Werror -c ft_strjoin.c -o ft_strjoin.o -I .
+gcc -Wall -Wextra -Werror -c ft_strtrim.c -o ft_strtrim.o -I .
+gcc -Wall -Wextra -Werror -c ft_split.c -o ft_split.o -I .
+gcc -Wall -Wextra -Werror -c ft_itoa.c -o ft_itoa.o -I .
+gcc -Wall -Wextra -Werror -c ft_strmapi.c -o ft_strmapi.o -I .
+gcc -Wall -Wextra -Werror -c ft_putchar_fd.c -o ft_putchar_fd.o -I .
+gcc -Wall -Wextra -Werror -c ft_putstr_fd.c -o ft_putstr_fd.o -I .
+gcc -Wall -Wextra -Werror -c ft_putendl_fd.c -o ft_putendl_fd.o -I .
+gcc -Wall -Wextra -Werror -c ft_putnbr_fd.c -o ft_putnbr_fd.o -I .
+gcc -Wall -Wextra -Werror -c ft_putchar_bonus.c -o ft_putchar_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_putnbr_base_bonus.c -o ft_putnbr_base_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_putstr_bonus.c -o ft_putstr_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_putstr_len_bonus.c -o ft_putstr_len_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_putnbr_bonus.c -o ft_putnbr_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_itoa_base_bonus.c -o ft_itoa_base_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_free_function_bonus.c -o ft_free_function_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_llitoa_base_bonus.c -o ft_llitoa_base_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_llitoa_bonus.c -o ft_llitoa_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_ftoa_bonus.c -o ft_ftoa_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_power_bonus.c -o ft_power_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_iseven_bonus.c -o ft_iseven_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_abs_bonus.c -o ft_abs_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_roundup_number_bonus.c -o ft_roundup_number_bonus.o -I .
+ar -rc libft.a ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o ft_memchr.o ft_memcmp.o ft_strlen.o ft_strlcpy.o ft_strlcat.o ft_strchr.o ft_strrchr.o ft_strnstr.o ft_strncmp.o ft_atoi.o ft_isalpha.o ft_isdigit.o ft_isalnum.o ft_isascii.o ft_isprint.o ft_toupper.o ft_tolower.o ft_calloc.o ft_strdup.o ft_substr.o ft_strjoin.o ft_strtrim.o ft_split.o ft_itoa.o ft_strmapi.o ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_putchar_bonus.o ft_putnbr_base_bonus.o ft_putstr_bonus.o ft_putstr_len_bonus.o ft_putnbr_bonus.o ft_itoa_base_bonus.o ft_free_function_bonus.o ft_llitoa_base_bonus.o ft_llitoa_bonus.o ft_ftoa_bonus.o ft_power_bonus.o ft_iseven_bonus.o ft_abs_bonus.o ft_roundup_number_bonus.o
+gcc -Wall -Wextra -Werror -c ft_lstnew.c -o ft_lstnew.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstadd_front.c -o ft_lstadd_front.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstsize.c -o ft_lstsize.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstlast.c -o ft_lstlast.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstadd_back.c -o ft_lstadd_back.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstdelone.c -o ft_lstdelone.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstclear.c -o ft_lstclear.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstiter.c -o ft_lstiter.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstmap.c -o ft_lstmap.o -I .
+ar -rc libft.a ft_lstnew.o ft_lstadd_front.o ft_lstsize.o ft_lstlast.o ft_lstadd_back.o ft_lstdelone.o ft_lstclear.o ft_lstiter.o ft_lstmap.o
+cp ./libft/libft.a libftprintf.a
+ar -rc libftprintf.a ft_printf.o sources/set_params.o sources/handle_flags.o sources/get_case.o sources/case_c.o sources/case_s.o sources/case_percentage.o sources/case_p.o sources/case_d.o sources/case_u.o sources/case_x.o sources/case_percentage.o sources/case_n.o sources/case_f.o sources/case_g.o sources/case_e.o sources/case_o.o sources/handle_width.o sources/arg_conversions.o sources/handle_number.o sources/handle_double.o
+-rw-r--r--  1 deepthought  542  97144 Apr 23 16:36 libftprintf.a
+
+clang -Wall -Wextra -Werror -g3   -c -o test_s.o test_s.c
+clang -Wall -Wextra -Werror -g3   -c -o test_d.o test_d.c
+clang -Wall -Wextra -Werror -g3   -c -o test_p.o test_p.c
+clang -Wall -Wextra -Werror -g3   -c -o test_x.o test_x.c
+clang -Wall -Wextra -Werror -g3   -c -o test_i.o test_i.c
+clang -Wall -Wextra -Werror -g3   -c -o test_u.o test_u.c
+clang -Wall -Wextra -Werror -g3   -c -o test_c.o test_c.c
+clang -Wall -Wextra -Werror -g3   -c -o test_mix.o test_mix.c
+clang -Wall -Wextra -Werror -g3   -c -o main.o main.c
+clang -Wall -Wextra -Werror -g3 -o test_printf -L. -lftprintf test_s.o test_d.o test_p.o test_x.o test_i.o test_u.o test_c.o test_mix.o main.o
+
+test_s: [ok]
+test_d: [ok]
+test_p: [ok]
+test_x: [ok]
+test_i: [ok]
+test_u: [ok]
+test_c: [ok]
+test_mix: [ok]
+
+8/8 correct functions
+Grade: 50
+
+= test_fields ==================================================================
+/Library/Developer/CommandLineTools/usr/bin/make clean -C ./libft
+rm -f ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o ft_memchr.o ft_memcmp.o ft_strlen.o ft_strlcpy.o ft_strlcat.o ft_strchr.o ft_strrchr.o ft_strnstr.o ft_strncmp.o ft_atoi.o ft_isalpha.o ft_isdigit.o ft_isalnum.o ft_isascii.o ft_isprint.o ft_toupper.o ft_tolower.o ft_calloc.o ft_strdup.o ft_substr.o ft_strjoin.o ft_strtrim.o ft_split.o ft_itoa.o ft_strmapi.o ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_lstnew.o ft_lstadd_front.o ft_lstsize.o ft_lstlast.o ft_lstadd_back.o ft_lstdelone.o ft_lstclear.o ft_lstiter.o ft_lstmap.o ft_putchar_bonus.o ft_putnbr_base_bonus.o ft_putstr_bonus.o ft_putstr_len_bonus.o ft_putnbr_bonus.o ft_itoa_base_bonus.o ft_free_function_bonus.o ft_llitoa_base_bonus.o ft_llitoa_bonus.o ft_ftoa_bonus.o ft_power_bonus.o ft_iseven_bonus.o ft_abs_bonus.o ft_roundup_number_bonus.o
+rm -f ft_printf.o sources/set_params.o sources/handle_flags.o sources/get_case.o sources/case_c.o sources/case_s.o sources/case_percentage.o sources/case_p.o sources/case_d.o sources/case_u.o sources/case_x.o sources/case_percentage.o sources/case_n.o sources/case_f.o sources/case_g.o sources/case_e.o sources/case_o.o sources/handle_width.o sources/arg_conversions.o sources/handle_number.o sources/handle_double.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c ft_printf.c -o ft_printf.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/set_params.c -o sources/set_params.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/handle_flags.c -o sources/handle_flags.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/get_case.c -o sources/get_case.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_c.c -o sources/case_c.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_s.c -o sources/case_s.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_percentage.c -o sources/case_percentage.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_p.c -o sources/case_p.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_d.c -o sources/case_d.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_u.c -o sources/case_u.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_x.c -o sources/case_x.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_n.c -o sources/case_n.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_f.c -o sources/case_f.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_g.c -o sources/case_g.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_e.c -o sources/case_e.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_o.c -o sources/case_o.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/handle_width.c -o sources/handle_width.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/arg_conversions.c -o sources/arg_conversions.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/handle_number.c -o sources/handle_number.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/handle_double.c -o sources/handle_double.o
+/Library/Developer/CommandLineTools/usr/bin/make bonus -C ./libft
+gcc -Wall -Wextra -Werror -c ft_memset.c -o ft_memset.o -I .
+gcc -Wall -Wextra -Werror -c ft_bzero.c -o ft_bzero.o -I .
+gcc -Wall -Wextra -Werror -c ft_memcpy.c -o ft_memcpy.o -I .
+gcc -Wall -Wextra -Werror -c ft_memccpy.c -o ft_memccpy.o -I .
+gcc -Wall -Wextra -Werror -c ft_memmove.c -o ft_memmove.o -I .
+gcc -Wall -Wextra -Werror -c ft_memchr.c -o ft_memchr.o -I .
+gcc -Wall -Wextra -Werror -c ft_memcmp.c -o ft_memcmp.o -I .
+gcc -Wall -Wextra -Werror -c ft_strlen.c -o ft_strlen.o -I .
+gcc -Wall -Wextra -Werror -c ft_strlcpy.c -o ft_strlcpy.o -I .
+gcc -Wall -Wextra -Werror -c ft_strlcat.c -o ft_strlcat.o -I .
+gcc -Wall -Wextra -Werror -c ft_strchr.c -o ft_strchr.o -I .
+gcc -Wall -Wextra -Werror -c ft_strrchr.c -o ft_strrchr.o -I .
+gcc -Wall -Wextra -Werror -c ft_strnstr.c -o ft_strnstr.o -I .
+gcc -Wall -Wextra -Werror -c ft_strncmp.c -o ft_strncmp.o -I .
+gcc -Wall -Wextra -Werror -c ft_atoi.c -o ft_atoi.o -I .
+gcc -Wall -Wextra -Werror -c ft_isalpha.c -o ft_isalpha.o -I .
+gcc -Wall -Wextra -Werror -c ft_isdigit.c -o ft_isdigit.o -I .
+gcc -Wall -Wextra -Werror -c ft_isalnum.c -o ft_isalnum.o -I .
+gcc -Wall -Wextra -Werror -c ft_isascii.c -o ft_isascii.o -I .
+gcc -Wall -Wextra -Werror -c ft_isprint.c -o ft_isprint.o -I .
+gcc -Wall -Wextra -Werror -c ft_toupper.c -o ft_toupper.o -I .
+gcc -Wall -Wextra -Werror -c ft_tolower.c -o ft_tolower.o -I .
+gcc -Wall -Wextra -Werror -c ft_calloc.c -o ft_calloc.o -I .
+gcc -Wall -Wextra -Werror -c ft_strdup.c -o ft_strdup.o -I .
+gcc -Wall -Wextra -Werror -c ft_substr.c -o ft_substr.o -I .
+gcc -Wall -Wextra -Werror -c ft_strjoin.c -o ft_strjoin.o -I .
+gcc -Wall -Wextra -Werror -c ft_strtrim.c -o ft_strtrim.o -I .
+gcc -Wall -Wextra -Werror -c ft_split.c -o ft_split.o -I .
+gcc -Wall -Wextra -Werror -c ft_itoa.c -o ft_itoa.o -I .
+gcc -Wall -Wextra -Werror -c ft_strmapi.c -o ft_strmapi.o -I .
+gcc -Wall -Wextra -Werror -c ft_putchar_fd.c -o ft_putchar_fd.o -I .
+gcc -Wall -Wextra -Werror -c ft_putstr_fd.c -o ft_putstr_fd.o -I .
+gcc -Wall -Wextra -Werror -c ft_putendl_fd.c -o ft_putendl_fd.o -I .
+gcc -Wall -Wextra -Werror -c ft_putnbr_fd.c -o ft_putnbr_fd.o -I .
+gcc -Wall -Wextra -Werror -c ft_putchar_bonus.c -o ft_putchar_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_putnbr_base_bonus.c -o ft_putnbr_base_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_putstr_bonus.c -o ft_putstr_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_putstr_len_bonus.c -o ft_putstr_len_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_putnbr_bonus.c -o ft_putnbr_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_itoa_base_bonus.c -o ft_itoa_base_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_free_function_bonus.c -o ft_free_function_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_llitoa_base_bonus.c -o ft_llitoa_base_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_llitoa_bonus.c -o ft_llitoa_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_ftoa_bonus.c -o ft_ftoa_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_power_bonus.c -o ft_power_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_iseven_bonus.c -o ft_iseven_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_abs_bonus.c -o ft_abs_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_roundup_number_bonus.c -o ft_roundup_number_bonus.o -I .
+ar -rc libft.a ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o ft_memchr.o ft_memcmp.o ft_strlen.o ft_strlcpy.o ft_strlcat.o ft_strchr.o ft_strrchr.o ft_strnstr.o ft_strncmp.o ft_atoi.o ft_isalpha.o ft_isdigit.o ft_isalnum.o ft_isascii.o ft_isprint.o ft_toupper.o ft_tolower.o ft_calloc.o ft_strdup.o ft_substr.o ft_strjoin.o ft_strtrim.o ft_split.o ft_itoa.o ft_strmapi.o ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_putchar_bonus.o ft_putnbr_base_bonus.o ft_putstr_bonus.o ft_putstr_len_bonus.o ft_putnbr_bonus.o ft_itoa_base_bonus.o ft_free_function_bonus.o ft_llitoa_base_bonus.o ft_llitoa_bonus.o ft_ftoa_bonus.o ft_power_bonus.o ft_iseven_bonus.o ft_abs_bonus.o ft_roundup_number_bonus.o
+gcc -Wall -Wextra -Werror -c ft_lstnew.c -o ft_lstnew.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstadd_front.c -o ft_lstadd_front.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstsize.c -o ft_lstsize.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstlast.c -o ft_lstlast.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstadd_back.c -o ft_lstadd_back.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstdelone.c -o ft_lstdelone.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstclear.c -o ft_lstclear.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstiter.c -o ft_lstiter.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstmap.c -o ft_lstmap.o -I .
+ar -rc libft.a ft_lstnew.o ft_lstadd_front.o ft_lstsize.o ft_lstlast.o ft_lstadd_back.o ft_lstdelone.o ft_lstclear.o ft_lstiter.o ft_lstmap.o
+cp ./libft/libft.a libftprintf.a
+ar -rc libftprintf.a ft_printf.o sources/set_params.o sources/handle_flags.o sources/get_case.o sources/case_c.o sources/case_s.o sources/case_percentage.o sources/case_p.o sources/case_d.o sources/case_u.o sources/case_x.o sources/case_percentage.o sources/case_n.o sources/case_f.o sources/case_g.o sources/case_e.o sources/case_o.o sources/handle_width.o sources/arg_conversions.o sources/handle_number.o sources/handle_double.o
+/Library/Developer/CommandLineTools/usr/bin/make clean -C ./libft
+rm -f ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o ft_memchr.o ft_memcmp.o ft_strlen.o ft_strlcpy.o ft_strlcat.o ft_strchr.o ft_strrchr.o ft_strnstr.o ft_strncmp.o ft_atoi.o ft_isalpha.o ft_isdigit.o ft_isalnum.o ft_isascii.o ft_isprint.o ft_toupper.o ft_tolower.o ft_calloc.o ft_strdup.o ft_substr.o ft_strjoin.o ft_strtrim.o ft_split.o ft_itoa.o ft_strmapi.o ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_lstnew.o ft_lstadd_front.o ft_lstsize.o ft_lstlast.o ft_lstadd_back.o ft_lstdelone.o ft_lstclear.o ft_lstiter.o ft_lstmap.o ft_putchar_bonus.o ft_putnbr_base_bonus.o ft_putstr_bonus.o ft_putstr_len_bonus.o ft_putnbr_bonus.o ft_itoa_base_bonus.o ft_free_function_bonus.o ft_llitoa_base_bonus.o ft_llitoa_bonus.o ft_ftoa_bonus.o ft_power_bonus.o ft_iseven_bonus.o ft_abs_bonus.o ft_roundup_number_bonus.o
+rm -f ft_printf.o sources/set_params.o sources/handle_flags.o sources/get_case.o sources/case_c.o sources/case_s.o sources/case_percentage.o sources/case_p.o sources/case_d.o sources/case_u.o sources/case_x.o sources/case_percentage.o sources/case_n.o sources/case_f.o sources/case_g.o sources/case_e.o sources/case_o.o sources/handle_width.o sources/arg_conversions.o sources/handle_number.o sources/handle_double.o
+/Library/Developer/CommandLineTools/usr/bin/make fclean -C ./libft
+rm -f ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o ft_memchr.o ft_memcmp.o ft_strlen.o ft_strlcpy.o ft_strlcat.o ft_strchr.o ft_strrchr.o ft_strnstr.o ft_strncmp.o ft_atoi.o ft_isalpha.o ft_isdigit.o ft_isalnum.o ft_isascii.o ft_isprint.o ft_toupper.o ft_tolower.o ft_calloc.o ft_strdup.o ft_substr.o ft_strjoin.o ft_strtrim.o ft_split.o ft_itoa.o ft_strmapi.o ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_lstnew.o ft_lstadd_front.o ft_lstsize.o ft_lstlast.o ft_lstadd_back.o ft_lstdelone.o ft_lstclear.o ft_lstiter.o ft_lstmap.o ft_putchar_bonus.o ft_putnbr_base_bonus.o ft_putstr_bonus.o ft_putstr_len_bonus.o ft_putnbr_bonus.o ft_itoa_base_bonus.o ft_free_function_bonus.o ft_llitoa_base_bonus.o ft_llitoa_bonus.o ft_ftoa_bonus.o ft_power_bonus.o ft_iseven_bonus.o ft_abs_bonus.o ft_roundup_number_bonus.o
+rm -f libft.a
+rm -f libftprintf.a
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c ft_printf.c -o ft_printf.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/set_params.c -o sources/set_params.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/handle_flags.c -o sources/handle_flags.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/get_case.c -o sources/get_case.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_c.c -o sources/case_c.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_s.c -o sources/case_s.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_percentage.c -o sources/case_percentage.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_p.c -o sources/case_p.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_d.c -o sources/case_d.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_u.c -o sources/case_u.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_x.c -o sources/case_x.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_n.c -o sources/case_n.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_f.c -o sources/case_f.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_g.c -o sources/case_g.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_e.c -o sources/case_e.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_o.c -o sources/case_o.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/handle_width.c -o sources/handle_width.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/arg_conversions.c -o sources/arg_conversions.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/handle_number.c -o sources/handle_number.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/handle_double.c -o sources/handle_double.o
+/Library/Developer/CommandLineTools/usr/bin/make bonus -C ./libft
+gcc -Wall -Wextra -Werror -c ft_memset.c -o ft_memset.o -I .
+gcc -Wall -Wextra -Werror -c ft_bzero.c -o ft_bzero.o -I .
+gcc -Wall -Wextra -Werror -c ft_memcpy.c -o ft_memcpy.o -I .
+gcc -Wall -Wextra -Werror -c ft_memccpy.c -o ft_memccpy.o -I .
+gcc -Wall -Wextra -Werror -c ft_memmove.c -o ft_memmove.o -I .
+gcc -Wall -Wextra -Werror -c ft_memchr.c -o ft_memchr.o -I .
+gcc -Wall -Wextra -Werror -c ft_memcmp.c -o ft_memcmp.o -I .
+gcc -Wall -Wextra -Werror -c ft_strlen.c -o ft_strlen.o -I .
+gcc -Wall -Wextra -Werror -c ft_strlcpy.c -o ft_strlcpy.o -I .
+gcc -Wall -Wextra -Werror -c ft_strlcat.c -o ft_strlcat.o -I .
+gcc -Wall -Wextra -Werror -c ft_strchr.c -o ft_strchr.o -I .
+gcc -Wall -Wextra -Werror -c ft_strrchr.c -o ft_strrchr.o -I .
+gcc -Wall -Wextra -Werror -c ft_strnstr.c -o ft_strnstr.o -I .
+gcc -Wall -Wextra -Werror -c ft_strncmp.c -o ft_strncmp.o -I .
+gcc -Wall -Wextra -Werror -c ft_atoi.c -o ft_atoi.o -I .
+gcc -Wall -Wextra -Werror -c ft_isalpha.c -o ft_isalpha.o -I .
+gcc -Wall -Wextra -Werror -c ft_isdigit.c -o ft_isdigit.o -I .
+gcc -Wall -Wextra -Werror -c ft_isalnum.c -o ft_isalnum.o -I .
+gcc -Wall -Wextra -Werror -c ft_isascii.c -o ft_isascii.o -I .
+gcc -Wall -Wextra -Werror -c ft_isprint.c -o ft_isprint.o -I .
+gcc -Wall -Wextra -Werror -c ft_toupper.c -o ft_toupper.o -I .
+gcc -Wall -Wextra -Werror -c ft_tolower.c -o ft_tolower.o -I .
+gcc -Wall -Wextra -Werror -c ft_calloc.c -o ft_calloc.o -I .
+gcc -Wall -Wextra -Werror -c ft_strdup.c -o ft_strdup.o -I .
+gcc -Wall -Wextra -Werror -c ft_substr.c -o ft_substr.o -I .
+gcc -Wall -Wextra -Werror -c ft_strjoin.c -o ft_strjoin.o -I .
+gcc -Wall -Wextra -Werror -c ft_strtrim.c -o ft_strtrim.o -I .
+gcc -Wall -Wextra -Werror -c ft_split.c -o ft_split.o -I .
+gcc -Wall -Wextra -Werror -c ft_itoa.c -o ft_itoa.o -I .
+gcc -Wall -Wextra -Werror -c ft_strmapi.c -o ft_strmapi.o -I .
+gcc -Wall -Wextra -Werror -c ft_putchar_fd.c -o ft_putchar_fd.o -I .
+gcc -Wall -Wextra -Werror -c ft_putstr_fd.c -o ft_putstr_fd.o -I .
+gcc -Wall -Wextra -Werror -c ft_putendl_fd.c -o ft_putendl_fd.o -I .
+gcc -Wall -Wextra -Werror -c ft_putnbr_fd.c -o ft_putnbr_fd.o -I .
+gcc -Wall -Wextra -Werror -c ft_putchar_bonus.c -o ft_putchar_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_putnbr_base_bonus.c -o ft_putnbr_base_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_putstr_bonus.c -o ft_putstr_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_putstr_len_bonus.c -o ft_putstr_len_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_putnbr_bonus.c -o ft_putnbr_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_itoa_base_bonus.c -o ft_itoa_base_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_free_function_bonus.c -o ft_free_function_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_llitoa_base_bonus.c -o ft_llitoa_base_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_llitoa_bonus.c -o ft_llitoa_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_ftoa_bonus.c -o ft_ftoa_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_power_bonus.c -o ft_power_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_iseven_bonus.c -o ft_iseven_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_abs_bonus.c -o ft_abs_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_roundup_number_bonus.c -o ft_roundup_number_bonus.o -I .
+ar -rc libft.a ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o ft_memchr.o ft_memcmp.o ft_strlen.o ft_strlcpy.o ft_strlcat.o ft_strchr.o ft_strrchr.o ft_strnstr.o ft_strncmp.o ft_atoi.o ft_isalpha.o ft_isdigit.o ft_isalnum.o ft_isascii.o ft_isprint.o ft_toupper.o ft_tolower.o ft_calloc.o ft_strdup.o ft_substr.o ft_strjoin.o ft_strtrim.o ft_split.o ft_itoa.o ft_strmapi.o ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_putchar_bonus.o ft_putnbr_base_bonus.o ft_putstr_bonus.o ft_putstr_len_bonus.o ft_putnbr_bonus.o ft_itoa_base_bonus.o ft_free_function_bonus.o ft_llitoa_base_bonus.o ft_llitoa_bonus.o ft_ftoa_bonus.o ft_power_bonus.o ft_iseven_bonus.o ft_abs_bonus.o ft_roundup_number_bonus.o
+gcc -Wall -Wextra -Werror -c ft_lstnew.c -o ft_lstnew.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstadd_front.c -o ft_lstadd_front.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstsize.c -o ft_lstsize.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstlast.c -o ft_lstlast.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstadd_back.c -o ft_lstadd_back.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstdelone.c -o ft_lstdelone.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstclear.c -o ft_lstclear.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstiter.c -o ft_lstiter.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstmap.c -o ft_lstmap.o -I .
+ar -rc libft.a ft_lstnew.o ft_lstadd_front.o ft_lstsize.o ft_lstlast.o ft_lstadd_back.o ft_lstdelone.o ft_lstclear.o ft_lstiter.o ft_lstmap.o
+cp ./libft/libft.a libftprintf.a
+ar -rc libftprintf.a ft_printf.o sources/set_params.o sources/handle_flags.o sources/get_case.o sources/case_c.o sources/case_s.o sources/case_percentage.o sources/case_p.o sources/case_d.o sources/case_u.o sources/case_x.o sources/case_percentage.o sources/case_n.o sources/case_f.o sources/case_g.o sources/case_e.o sources/case_o.o sources/handle_width.o sources/arg_conversions.o sources/handle_number.o sources/handle_double.o
+/Library/Developer/CommandLineTools/usr/bin/make clean -C ./libft
+rm -f ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o ft_memchr.o ft_memcmp.o ft_strlen.o ft_strlcpy.o ft_strlcat.o ft_strchr.o ft_strrchr.o ft_strnstr.o ft_strncmp.o ft_atoi.o ft_isalpha.o ft_isdigit.o ft_isalnum.o ft_isascii.o ft_isprint.o ft_toupper.o ft_tolower.o ft_calloc.o ft_strdup.o ft_substr.o ft_strjoin.o ft_strtrim.o ft_split.o ft_itoa.o ft_strmapi.o ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_lstnew.o ft_lstadd_front.o ft_lstsize.o ft_lstlast.o ft_lstadd_back.o ft_lstdelone.o ft_lstclear.o ft_lstiter.o ft_lstmap.o ft_putchar_bonus.o ft_putnbr_base_bonus.o ft_putstr_bonus.o ft_putstr_len_bonus.o ft_putnbr_bonus.o ft_itoa_base_bonus.o ft_free_function_bonus.o ft_llitoa_base_bonus.o ft_llitoa_bonus.o ft_ftoa_bonus.o ft_power_bonus.o ft_iseven_bonus.o ft_abs_bonus.o ft_roundup_number_bonus.o
+rm -f ft_printf.o sources/set_params.o sources/handle_flags.o sources/get_case.o sources/case_c.o sources/case_s.o sources/case_percentage.o sources/case_p.o sources/case_d.o sources/case_u.o sources/case_x.o sources/case_percentage.o sources/case_n.o sources/case_f.o sources/case_g.o sources/case_e.o sources/case_o.o sources/handle_width.o sources/arg_conversions.o sources/handle_number.o sources/handle_double.o
+/Library/Developer/CommandLineTools/usr/bin/make fclean -C ./libft
+rm -f ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o ft_memchr.o ft_memcmp.o ft_strlen.o ft_strlcpy.o ft_strlcat.o ft_strchr.o ft_strrchr.o ft_strnstr.o ft_strncmp.o ft_atoi.o ft_isalpha.o ft_isdigit.o ft_isalnum.o ft_isascii.o ft_isprint.o ft_toupper.o ft_tolower.o ft_calloc.o ft_strdup.o ft_substr.o ft_strjoin.o ft_strtrim.o ft_split.o ft_itoa.o ft_strmapi.o ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_lstnew.o ft_lstadd_front.o ft_lstsize.o ft_lstlast.o ft_lstadd_back.o ft_lstdelone.o ft_lstclear.o ft_lstiter.o ft_lstmap.o ft_putchar_bonus.o ft_putnbr_base_bonus.o ft_putstr_bonus.o ft_putstr_len_bonus.o ft_putnbr_bonus.o ft_itoa_base_bonus.o ft_free_function_bonus.o ft_llitoa_base_bonus.o ft_llitoa_bonus.o ft_ftoa_bonus.o ft_power_bonus.o ft_iseven_bonus.o ft_abs_bonus.o ft_roundup_number_bonus.o
+rm -f libft.a
+rm -f libftprintf.a
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c ft_printf.c -o ft_printf.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/set_params.c -o sources/set_params.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/handle_flags.c -o sources/handle_flags.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/get_case.c -o sources/get_case.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_c.c -o sources/case_c.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_s.c -o sources/case_s.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_percentage.c -o sources/case_percentage.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_p.c -o sources/case_p.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_d.c -o sources/case_d.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_u.c -o sources/case_u.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_x.c -o sources/case_x.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_n.c -o sources/case_n.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_f.c -o sources/case_f.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_g.c -o sources/case_g.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_e.c -o sources/case_e.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_o.c -o sources/case_o.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/handle_width.c -o sources/handle_width.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/arg_conversions.c -o sources/arg_conversions.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/handle_number.c -o sources/handle_number.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/handle_double.c -o sources/handle_double.o
+/Library/Developer/CommandLineTools/usr/bin/make bonus -C ./libft
+gcc -Wall -Wextra -Werror -c ft_memset.c -o ft_memset.o -I .
+gcc -Wall -Wextra -Werror -c ft_bzero.c -o ft_bzero.o -I .
+gcc -Wall -Wextra -Werror -c ft_memcpy.c -o ft_memcpy.o -I .
+gcc -Wall -Wextra -Werror -c ft_memccpy.c -o ft_memccpy.o -I .
+gcc -Wall -Wextra -Werror -c ft_memmove.c -o ft_memmove.o -I .
+gcc -Wall -Wextra -Werror -c ft_memchr.c -o ft_memchr.o -I .
+gcc -Wall -Wextra -Werror -c ft_memcmp.c -o ft_memcmp.o -I .
+gcc -Wall -Wextra -Werror -c ft_strlen.c -o ft_strlen.o -I .
+gcc -Wall -Wextra -Werror -c ft_strlcpy.c -o ft_strlcpy.o -I .
+gcc -Wall -Wextra -Werror -c ft_strlcat.c -o ft_strlcat.o -I .
+gcc -Wall -Wextra -Werror -c ft_strchr.c -o ft_strchr.o -I .
+gcc -Wall -Wextra -Werror -c ft_strrchr.c -o ft_strrchr.o -I .
+gcc -Wall -Wextra -Werror -c ft_strnstr.c -o ft_strnstr.o -I .
+gcc -Wall -Wextra -Werror -c ft_strncmp.c -o ft_strncmp.o -I .
+gcc -Wall -Wextra -Werror -c ft_atoi.c -o ft_atoi.o -I .
+gcc -Wall -Wextra -Werror -c ft_isalpha.c -o ft_isalpha.o -I .
+gcc -Wall -Wextra -Werror -c ft_isdigit.c -o ft_isdigit.o -I .
+gcc -Wall -Wextra -Werror -c ft_isalnum.c -o ft_isalnum.o -I .
+gcc -Wall -Wextra -Werror -c ft_isascii.c -o ft_isascii.o -I .
+gcc -Wall -Wextra -Werror -c ft_isprint.c -o ft_isprint.o -I .
+gcc -Wall -Wextra -Werror -c ft_toupper.c -o ft_toupper.o -I .
+gcc -Wall -Wextra -Werror -c ft_tolower.c -o ft_tolower.o -I .
+gcc -Wall -Wextra -Werror -c ft_calloc.c -o ft_calloc.o -I .
+gcc -Wall -Wextra -Werror -c ft_strdup.c -o ft_strdup.o -I .
+gcc -Wall -Wextra -Werror -c ft_substr.c -o ft_substr.o -I .
+gcc -Wall -Wextra -Werror -c ft_strjoin.c -o ft_strjoin.o -I .
+gcc -Wall -Wextra -Werror -c ft_strtrim.c -o ft_strtrim.o -I .
+gcc -Wall -Wextra -Werror -c ft_split.c -o ft_split.o -I .
+gcc -Wall -Wextra -Werror -c ft_itoa.c -o ft_itoa.o -I .
+gcc -Wall -Wextra -Werror -c ft_strmapi.c -o ft_strmapi.o -I .
+gcc -Wall -Wextra -Werror -c ft_putchar_fd.c -o ft_putchar_fd.o -I .
+gcc -Wall -Wextra -Werror -c ft_putstr_fd.c -o ft_putstr_fd.o -I .
+gcc -Wall -Wextra -Werror -c ft_putendl_fd.c -o ft_putendl_fd.o -I .
+gcc -Wall -Wextra -Werror -c ft_putnbr_fd.c -o ft_putnbr_fd.o -I .
+gcc -Wall -Wextra -Werror -c ft_putchar_bonus.c -o ft_putchar_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_putnbr_base_bonus.c -o ft_putnbr_base_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_putstr_bonus.c -o ft_putstr_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_putstr_len_bonus.c -o ft_putstr_len_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_putnbr_bonus.c -o ft_putnbr_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_itoa_base_bonus.c -o ft_itoa_base_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_free_function_bonus.c -o ft_free_function_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_llitoa_base_bonus.c -o ft_llitoa_base_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_llitoa_bonus.c -o ft_llitoa_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_ftoa_bonus.c -o ft_ftoa_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_power_bonus.c -o ft_power_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_iseven_bonus.c -o ft_iseven_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_abs_bonus.c -o ft_abs_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_roundup_number_bonus.c -o ft_roundup_number_bonus.o -I .
+ar -rc libft.a ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o ft_memchr.o ft_memcmp.o ft_strlen.o ft_strlcpy.o ft_strlcat.o ft_strchr.o ft_strrchr.o ft_strnstr.o ft_strncmp.o ft_atoi.o ft_isalpha.o ft_isdigit.o ft_isalnum.o ft_isascii.o ft_isprint.o ft_toupper.o ft_tolower.o ft_calloc.o ft_strdup.o ft_substr.o ft_strjoin.o ft_strtrim.o ft_split.o ft_itoa.o ft_strmapi.o ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_putchar_bonus.o ft_putnbr_base_bonus.o ft_putstr_bonus.o ft_putstr_len_bonus.o ft_putnbr_bonus.o ft_itoa_base_bonus.o ft_free_function_bonus.o ft_llitoa_base_bonus.o ft_llitoa_bonus.o ft_ftoa_bonus.o ft_power_bonus.o ft_iseven_bonus.o ft_abs_bonus.o ft_roundup_number_bonus.o
+gcc -Wall -Wextra -Werror -c ft_lstnew.c -o ft_lstnew.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstadd_front.c -o ft_lstadd_front.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstsize.c -o ft_lstsize.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstlast.c -o ft_lstlast.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstadd_back.c -o ft_lstadd_back.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstdelone.c -o ft_lstdelone.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstclear.c -o ft_lstclear.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstiter.c -o ft_lstiter.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstmap.c -o ft_lstmap.o -I .
+ar -rc libft.a ft_lstnew.o ft_lstadd_front.o ft_lstsize.o ft_lstlast.o ft_lstadd_back.o ft_lstdelone.o ft_lstclear.o ft_lstiter.o ft_lstmap.o
+cp ./libft/libft.a libftprintf.a
+ar -rc libftprintf.a ft_printf.o sources/set_params.o sources/handle_flags.o sources/get_case.o sources/case_c.o sources/case_s.o sources/case_percentage.o sources/case_p.o sources/case_d.o sources/case_u.o sources/case_x.o sources/case_percentage.o sources/case_n.o sources/case_f.o sources/case_g.o sources/case_e.o sources/case_o.o sources/handle_width.o sources/arg_conversions.o sources/handle_number.o sources/handle_double.o
+-rw-r--r--  1 deepthought  542  97144 Apr 23 16:36 libftprintf.a
+
+clang -Wall -Wextra -Werror -g3   -c -o test_precision.o test_precision.c
+clang -Wall -Wextra -Werror -g3   -c -o test_zero.o test_zero.c
+clang -Wall -Wextra -Werror -g3   -c -o test_minus.o test_minus.c
+clang -Wall -Wextra -Werror -g3   -c -o test_star.o test_star.c
+clang -Wall -Wextra -Werror -g3   -c -o main.o main.c
+clang -Wall -Wextra -Werror -g3 -o test_printf -L. -lftprintf test_precision.o test_zero.o test_minus.o test_star.o main.o
+
+test_precision: [ok]
+test_zero: [ok]
+test_minus: [ok]
+test_star: [ok]
+
+4/4 correct functions
+Grade: 50
+
+= bonus_test ===================================================================
+/Library/Developer/CommandLineTools/usr/bin/make clean -C ./libft
+rm -f ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o ft_memchr.o ft_memcmp.o ft_strlen.o ft_strlcpy.o ft_strlcat.o ft_strchr.o ft_strrchr.o ft_strnstr.o ft_strncmp.o ft_atoi.o ft_isalpha.o ft_isdigit.o ft_isalnum.o ft_isascii.o ft_isprint.o ft_toupper.o ft_tolower.o ft_calloc.o ft_strdup.o ft_substr.o ft_strjoin.o ft_strtrim.o ft_split.o ft_itoa.o ft_strmapi.o ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_lstnew.o ft_lstadd_front.o ft_lstsize.o ft_lstlast.o ft_lstadd_back.o ft_lstdelone.o ft_lstclear.o ft_lstiter.o ft_lstmap.o ft_putchar_bonus.o ft_putnbr_base_bonus.o ft_putstr_bonus.o ft_putstr_len_bonus.o ft_putnbr_bonus.o ft_itoa_base_bonus.o ft_free_function_bonus.o ft_llitoa_base_bonus.o ft_llitoa_bonus.o ft_ftoa_bonus.o ft_power_bonus.o ft_iseven_bonus.o ft_abs_bonus.o ft_roundup_number_bonus.o
+rm -f ft_printf.o sources/set_params.o sources/handle_flags.o sources/get_case.o sources/case_c.o sources/case_s.o sources/case_percentage.o sources/case_p.o sources/case_d.o sources/case_u.o sources/case_x.o sources/case_percentage.o sources/case_n.o sources/case_f.o sources/case_g.o sources/case_e.o sources/case_o.o sources/handle_width.o sources/arg_conversions.o sources/handle_number.o sources/handle_double.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c ft_printf.c -o ft_printf.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/set_params.c -o sources/set_params.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/handle_flags.c -o sources/handle_flags.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/get_case.c -o sources/get_case.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_c.c -o sources/case_c.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_s.c -o sources/case_s.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_percentage.c -o sources/case_percentage.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_p.c -o sources/case_p.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_d.c -o sources/case_d.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_u.c -o sources/case_u.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_x.c -o sources/case_x.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_n.c -o sources/case_n.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_f.c -o sources/case_f.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_g.c -o sources/case_g.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_e.c -o sources/case_e.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_o.c -o sources/case_o.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/handle_width.c -o sources/handle_width.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/arg_conversions.c -o sources/arg_conversions.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/handle_number.c -o sources/handle_number.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/handle_double.c -o sources/handle_double.o
+/Library/Developer/CommandLineTools/usr/bin/make bonus -C ./libft
+gcc -Wall -Wextra -Werror -c ft_memset.c -o ft_memset.o -I .
+gcc -Wall -Wextra -Werror -c ft_bzero.c -o ft_bzero.o -I .
+gcc -Wall -Wextra -Werror -c ft_memcpy.c -o ft_memcpy.o -I .
+gcc -Wall -Wextra -Werror -c ft_memccpy.c -o ft_memccpy.o -I .
+gcc -Wall -Wextra -Werror -c ft_memmove.c -o ft_memmove.o -I .
+gcc -Wall -Wextra -Werror -c ft_memchr.c -o ft_memchr.o -I .
+gcc -Wall -Wextra -Werror -c ft_memcmp.c -o ft_memcmp.o -I .
+gcc -Wall -Wextra -Werror -c ft_strlen.c -o ft_strlen.o -I .
+gcc -Wall -Wextra -Werror -c ft_strlcpy.c -o ft_strlcpy.o -I .
+gcc -Wall -Wextra -Werror -c ft_strlcat.c -o ft_strlcat.o -I .
+gcc -Wall -Wextra -Werror -c ft_strchr.c -o ft_strchr.o -I .
+gcc -Wall -Wextra -Werror -c ft_strrchr.c -o ft_strrchr.o -I .
+gcc -Wall -Wextra -Werror -c ft_strnstr.c -o ft_strnstr.o -I .
+gcc -Wall -Wextra -Werror -c ft_strncmp.c -o ft_strncmp.o -I .
+gcc -Wall -Wextra -Werror -c ft_atoi.c -o ft_atoi.o -I .
+gcc -Wall -Wextra -Werror -c ft_isalpha.c -o ft_isalpha.o -I .
+gcc -Wall -Wextra -Werror -c ft_isdigit.c -o ft_isdigit.o -I .
+gcc -Wall -Wextra -Werror -c ft_isalnum.c -o ft_isalnum.o -I .
+gcc -Wall -Wextra -Werror -c ft_isascii.c -o ft_isascii.o -I .
+gcc -Wall -Wextra -Werror -c ft_isprint.c -o ft_isprint.o -I .
+gcc -Wall -Wextra -Werror -c ft_toupper.c -o ft_toupper.o -I .
+gcc -Wall -Wextra -Werror -c ft_tolower.c -o ft_tolower.o -I .
+gcc -Wall -Wextra -Werror -c ft_calloc.c -o ft_calloc.o -I .
+gcc -Wall -Wextra -Werror -c ft_strdup.c -o ft_strdup.o -I .
+gcc -Wall -Wextra -Werror -c ft_substr.c -o ft_substr.o -I .
+gcc -Wall -Wextra -Werror -c ft_strjoin.c -o ft_strjoin.o -I .
+gcc -Wall -Wextra -Werror -c ft_strtrim.c -o ft_strtrim.o -I .
+gcc -Wall -Wextra -Werror -c ft_split.c -o ft_split.o -I .
+gcc -Wall -Wextra -Werror -c ft_itoa.c -o ft_itoa.o -I .
+gcc -Wall -Wextra -Werror -c ft_strmapi.c -o ft_strmapi.o -I .
+gcc -Wall -Wextra -Werror -c ft_putchar_fd.c -o ft_putchar_fd.o -I .
+gcc -Wall -Wextra -Werror -c ft_putstr_fd.c -o ft_putstr_fd.o -I .
+gcc -Wall -Wextra -Werror -c ft_putendl_fd.c -o ft_putendl_fd.o -I .
+gcc -Wall -Wextra -Werror -c ft_putnbr_fd.c -o ft_putnbr_fd.o -I .
+gcc -Wall -Wextra -Werror -c ft_putchar_bonus.c -o ft_putchar_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_putnbr_base_bonus.c -o ft_putnbr_base_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_putstr_bonus.c -o ft_putstr_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_putstr_len_bonus.c -o ft_putstr_len_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_putnbr_bonus.c -o ft_putnbr_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_itoa_base_bonus.c -o ft_itoa_base_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_free_function_bonus.c -o ft_free_function_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_llitoa_base_bonus.c -o ft_llitoa_base_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_llitoa_bonus.c -o ft_llitoa_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_ftoa_bonus.c -o ft_ftoa_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_power_bonus.c -o ft_power_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_iseven_bonus.c -o ft_iseven_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_abs_bonus.c -o ft_abs_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_roundup_number_bonus.c -o ft_roundup_number_bonus.o -I .
+ar -rc libft.a ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o ft_memchr.o ft_memcmp.o ft_strlen.o ft_strlcpy.o ft_strlcat.o ft_strchr.o ft_strrchr.o ft_strnstr.o ft_strncmp.o ft_atoi.o ft_isalpha.o ft_isdigit.o ft_isalnum.o ft_isascii.o ft_isprint.o ft_toupper.o ft_tolower.o ft_calloc.o ft_strdup.o ft_substr.o ft_strjoin.o ft_strtrim.o ft_split.o ft_itoa.o ft_strmapi.o ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_putchar_bonus.o ft_putnbr_base_bonus.o ft_putstr_bonus.o ft_putstr_len_bonus.o ft_putnbr_bonus.o ft_itoa_base_bonus.o ft_free_function_bonus.o ft_llitoa_base_bonus.o ft_llitoa_bonus.o ft_ftoa_bonus.o ft_power_bonus.o ft_iseven_bonus.o ft_abs_bonus.o ft_roundup_number_bonus.o
+gcc -Wall -Wextra -Werror -c ft_lstnew.c -o ft_lstnew.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstadd_front.c -o ft_lstadd_front.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstsize.c -o ft_lstsize.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstlast.c -o ft_lstlast.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstadd_back.c -o ft_lstadd_back.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstdelone.c -o ft_lstdelone.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstclear.c -o ft_lstclear.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstiter.c -o ft_lstiter.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstmap.c -o ft_lstmap.o -I .
+ar -rc libft.a ft_lstnew.o ft_lstadd_front.o ft_lstsize.o ft_lstlast.o ft_lstadd_back.o ft_lstdelone.o ft_lstclear.o ft_lstiter.o ft_lstmap.o
+cp ./libft/libft.a libftprintf.a
+ar -rc libftprintf.a ft_printf.o sources/set_params.o sources/handle_flags.o sources/get_case.o sources/case_c.o sources/case_s.o sources/case_percentage.o sources/case_p.o sources/case_d.o sources/case_u.o sources/case_x.o sources/case_percentage.o sources/case_n.o sources/case_f.o sources/case_g.o sources/case_e.o sources/case_o.o sources/handle_width.o sources/arg_conversions.o sources/handle_number.o sources/handle_double.o
+/Library/Developer/CommandLineTools/usr/bin/make clean -C ./libft
+rm -f ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o ft_memchr.o ft_memcmp.o ft_strlen.o ft_strlcpy.o ft_strlcat.o ft_strchr.o ft_strrchr.o ft_strnstr.o ft_strncmp.o ft_atoi.o ft_isalpha.o ft_isdigit.o ft_isalnum.o ft_isascii.o ft_isprint.o ft_toupper.o ft_tolower.o ft_calloc.o ft_strdup.o ft_substr.o ft_strjoin.o ft_strtrim.o ft_split.o ft_itoa.o ft_strmapi.o ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_lstnew.o ft_lstadd_front.o ft_lstsize.o ft_lstlast.o ft_lstadd_back.o ft_lstdelone.o ft_lstclear.o ft_lstiter.o ft_lstmap.o ft_putchar_bonus.o ft_putnbr_base_bonus.o ft_putstr_bonus.o ft_putstr_len_bonus.o ft_putnbr_bonus.o ft_itoa_base_bonus.o ft_free_function_bonus.o ft_llitoa_base_bonus.o ft_llitoa_bonus.o ft_ftoa_bonus.o ft_power_bonus.o ft_iseven_bonus.o ft_abs_bonus.o ft_roundup_number_bonus.o
+rm -f ft_printf.o sources/set_params.o sources/handle_flags.o sources/get_case.o sources/case_c.o sources/case_s.o sources/case_percentage.o sources/case_p.o sources/case_d.o sources/case_u.o sources/case_x.o sources/case_percentage.o sources/case_n.o sources/case_f.o sources/case_g.o sources/case_e.o sources/case_o.o sources/handle_width.o sources/arg_conversions.o sources/handle_number.o sources/handle_double.o
+/Library/Developer/CommandLineTools/usr/bin/make fclean -C ./libft
+rm -f ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o ft_memchr.o ft_memcmp.o ft_strlen.o ft_strlcpy.o ft_strlcat.o ft_strchr.o ft_strrchr.o ft_strnstr.o ft_strncmp.o ft_atoi.o ft_isalpha.o ft_isdigit.o ft_isalnum.o ft_isascii.o ft_isprint.o ft_toupper.o ft_tolower.o ft_calloc.o ft_strdup.o ft_substr.o ft_strjoin.o ft_strtrim.o ft_split.o ft_itoa.o ft_strmapi.o ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_lstnew.o ft_lstadd_front.o ft_lstsize.o ft_lstlast.o ft_lstadd_back.o ft_lstdelone.o ft_lstclear.o ft_lstiter.o ft_lstmap.o ft_putchar_bonus.o ft_putnbr_base_bonus.o ft_putstr_bonus.o ft_putstr_len_bonus.o ft_putnbr_bonus.o ft_itoa_base_bonus.o ft_free_function_bonus.o ft_llitoa_base_bonus.o ft_llitoa_bonus.o ft_ftoa_bonus.o ft_power_bonus.o ft_iseven_bonus.o ft_abs_bonus.o ft_roundup_number_bonus.o
+rm -f libft.a
+rm -f libftprintf.a
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c ft_printf.c -o ft_printf.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/set_params.c -o sources/set_params.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/handle_flags.c -o sources/handle_flags.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/get_case.c -o sources/get_case.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_c.c -o sources/case_c.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_s.c -o sources/case_s.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_percentage.c -o sources/case_percentage.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_p.c -o sources/case_p.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_d.c -o sources/case_d.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_u.c -o sources/case_u.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_x.c -o sources/case_x.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_n.c -o sources/case_n.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_f.c -o sources/case_f.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_g.c -o sources/case_g.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_e.c -o sources/case_e.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/case_o.c -o sources/case_o.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/handle_width.c -o sources/handle_width.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/arg_conversions.c -o sources/arg_conversions.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/handle_number.c -o sources/handle_number.o
+gcc -Wall -Wextra -Werror -Iincludes -Ilibft -c sources/handle_double.c -o sources/handle_double.o
+/Library/Developer/CommandLineTools/usr/bin/make bonus -C ./libft
+gcc -Wall -Wextra -Werror -c ft_memset.c -o ft_memset.o -I .
+gcc -Wall -Wextra -Werror -c ft_bzero.c -o ft_bzero.o -I .
+gcc -Wall -Wextra -Werror -c ft_memcpy.c -o ft_memcpy.o -I .
+gcc -Wall -Wextra -Werror -c ft_memccpy.c -o ft_memccpy.o -I .
+gcc -Wall -Wextra -Werror -c ft_memmove.c -o ft_memmove.o -I .
+gcc -Wall -Wextra -Werror -c ft_memchr.c -o ft_memchr.o -I .
+gcc -Wall -Wextra -Werror -c ft_memcmp.c -o ft_memcmp.o -I .
+gcc -Wall -Wextra -Werror -c ft_strlen.c -o ft_strlen.o -I .
+gcc -Wall -Wextra -Werror -c ft_strlcpy.c -o ft_strlcpy.o -I .
+gcc -Wall -Wextra -Werror -c ft_strlcat.c -o ft_strlcat.o -I .
+gcc -Wall -Wextra -Werror -c ft_strchr.c -o ft_strchr.o -I .
+gcc -Wall -Wextra -Werror -c ft_strrchr.c -o ft_strrchr.o -I .
+gcc -Wall -Wextra -Werror -c ft_strnstr.c -o ft_strnstr.o -I .
+gcc -Wall -Wextra -Werror -c ft_strncmp.c -o ft_strncmp.o -I .
+gcc -Wall -Wextra -Werror -c ft_atoi.c -o ft_atoi.o -I .
+gcc -Wall -Wextra -Werror -c ft_isalpha.c -o ft_isalpha.o -I .
+gcc -Wall -Wextra -Werror -c ft_isdigit.c -o ft_isdigit.o -I .
+gcc -Wall -Wextra -Werror -c ft_isalnum.c -o ft_isalnum.o -I .
+gcc -Wall -Wextra -Werror -c ft_isascii.c -o ft_isascii.o -I .
+gcc -Wall -Wextra -Werror -c ft_isprint.c -o ft_isprint.o -I .
+gcc -Wall -Wextra -Werror -c ft_toupper.c -o ft_toupper.o -I .
+gcc -Wall -Wextra -Werror -c ft_tolower.c -o ft_tolower.o -I .
+gcc -Wall -Wextra -Werror -c ft_calloc.c -o ft_calloc.o -I .
+gcc -Wall -Wextra -Werror -c ft_strdup.c -o ft_strdup.o -I .
+gcc -Wall -Wextra -Werror -c ft_substr.c -o ft_substr.o -I .
+gcc -Wall -Wextra -Werror -c ft_strjoin.c -o ft_strjoin.o -I .
+gcc -Wall -Wextra -Werror -c ft_strtrim.c -o ft_strtrim.o -I .
+gcc -Wall -Wextra -Werror -c ft_split.c -o ft_split.o -I .
+gcc -Wall -Wextra -Werror -c ft_itoa.c -o ft_itoa.o -I .
+gcc -Wall -Wextra -Werror -c ft_strmapi.c -o ft_strmapi.o -I .
+gcc -Wall -Wextra -Werror -c ft_putchar_fd.c -o ft_putchar_fd.o -I .
+gcc -Wall -Wextra -Werror -c ft_putstr_fd.c -o ft_putstr_fd.o -I .
+gcc -Wall -Wextra -Werror -c ft_putendl_fd.c -o ft_putendl_fd.o -I .
+gcc -Wall -Wextra -Werror -c ft_putnbr_fd.c -o ft_putnbr_fd.o -I .
+gcc -Wall -Wextra -Werror -c ft_putchar_bonus.c -o ft_putchar_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_putnbr_base_bonus.c -o ft_putnbr_base_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_putstr_bonus.c -o ft_putstr_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_putstr_len_bonus.c -o ft_putstr_len_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_putnbr_bonus.c -o ft_putnbr_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_itoa_base_bonus.c -o ft_itoa_base_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_free_function_bonus.c -o ft_free_function_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_llitoa_base_bonus.c -o ft_llitoa_base_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_llitoa_bonus.c -o ft_llitoa_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_ftoa_bonus.c -o ft_ftoa_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_power_bonus.c -o ft_power_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_iseven_bonus.c -o ft_iseven_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_abs_bonus.c -o ft_abs_bonus.o -I .
+gcc -Wall -Wextra -Werror -c ft_roundup_number_bonus.c -o ft_roundup_number_bonus.o -I .
+ar -rc libft.a ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o ft_memchr.o ft_memcmp.o ft_strlen.o ft_strlcpy.o ft_strlcat.o ft_strchr.o ft_strrchr.o ft_strnstr.o ft_strncmp.o ft_atoi.o ft_isalpha.o ft_isdigit.o ft_isalnum.o ft_isascii.o ft_isprint.o ft_toupper.o ft_tolower.o ft_calloc.o ft_strdup.o ft_substr.o ft_strjoin.o ft_strtrim.o ft_split.o ft_itoa.o ft_strmapi.o ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_putchar_bonus.o ft_putnbr_base_bonus.o ft_putstr_bonus.o ft_putstr_len_bonus.o ft_putnbr_bonus.o ft_itoa_base_bonus.o ft_free_function_bonus.o ft_llitoa_base_bonus.o ft_llitoa_bonus.o ft_ftoa_bonus.o ft_power_bonus.o ft_iseven_bonus.o ft_abs_bonus.o ft_roundup_number_bonus.o
+gcc -Wall -Wextra -Werror -c ft_lstnew.c -o ft_lstnew.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstadd_front.c -o ft_lstadd_front.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstsize.c -o ft_lstsize.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstlast.c -o ft_lstlast.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstadd_back.c -o ft_lstadd_back.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstdelone.c -o ft_lstdelone.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstclear.c -o ft_lstclear.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstiter.c -o ft_lstiter.o -I .
+gcc -Wall -Wextra -Werror -c ft_lstmap.c -o ft_lstmap.o -I .
+ar -rc libft.a ft_lstnew.o ft_lstadd_front.o ft_lstsize.o ft_lstlast.o ft_lstadd_back.o ft_lstdelone.o ft_lstclear.o ft_lstiter.o ft_lstmap.o
+cp ./libft/libft.a libftprintf.a
+ar -rc libftprintf.a ft_printf.o sources/set_params.o sources/handle_flags.o sources/get_case.o sources/case_c.o sources/case_s.o sources/case_percentage.o sources/case_p.o sources/case_d.o sources/case_u.o sources/case_x.o sources/case_percentage.o sources/case_n.o sources/case_f.o sources/case_g.o sources/case_e.o sources/case_o.o sources/handle_width.o sources/arg_conversions.o sources/handle_number.o sources/handle_double.o
+-rw-r--r--  1 deepthought  542  97144 Apr 23 16:36 libftprintf.a
+
+clang -Wall -Wextra -Werror -g3   -c -o test_n.o test_n.c
+clang -Wall -Wextra -Werror -g3   -c -o test_f.o test_f.c
+clang -Wall -Wextra -Werror -g3   -c -o test_e.o test_e.c
+clang -Wall -Wextra -Werror -g3   -c -o test_g.o test_g.c
+clang -Wall -Wextra -Werror -g3   -c -o test_l.o test_l.c
+clang -Wall -Wextra -Werror -g3   -c -o test_ll.o test_ll.c
+clang -Wall -Wextra -Werror -g3   -c -o test_h.o test_h.c
+clang -Wall -Wextra -Werror -g3   -c -o test_hh.o test_hh.c
+clang -Wall -Wextra -Werror -g3   -c -o test_space.o test_space.c
+clang -Wall -Wextra -Werror -g3   -c -o test_plus.o test_plus.c
+clang -Wall -Wextra -Werror -g3   -c -o test_hashtag.o test_hashtag.c
+clang -Wall -Wextra -Werror -g3   -c -o main.o main.c
+clang -Wall -Wextra -Werror -g3 -o test_printf -L. -lftprintf test_n.o test_f.o test_e.o test_g.o test_l.o test_ll.o test_h.o test_hh.o test_space.o test_plus.o test_hashtag.o main.o
+
+test_n: [ok]
+test_f: [ok]
+test_g: [ko]
+test_e: [ko]
+test_l: [ko]
+test_ll: [ok]
+test_h: [ok]
+test_hh: [ok]
+test_hashtag: [ok]
+test_space: [ok]
+test_plus: [ok]
+
+8/11 correct functions
+Grade: 10
+
+= Final grade: 110 =============================================================

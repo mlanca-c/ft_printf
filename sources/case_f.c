@@ -6,11 +6,11 @@
 /*   By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/15 12:37:55 by mlanca-c          #+#    #+#             */
-/*   Updated: 2021/03/30 10:52:35 by mlanca-c         ###   ########.fr       */
+/*   Updated: 2021/04/20 11:36:45 by mlanca-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "ft_printf.h"
 
 static void	handle_precision(t_flags *flags, double d)
 {

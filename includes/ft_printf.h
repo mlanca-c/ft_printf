@@ -6,22 +6,21 @@
 /*   By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 14:54:58 by mlanca-c          #+#    #+#             */
-/*   Updated: 2021/03/30 10:59:32 by mlanca-c         ###   ########.fr       */
+/*   Updated: 2021/04/21 16:06:23 by mlanca-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-//PROVAVELMENTE NAO POSSO FAZER ISTO
 # define D "0123456789"
 # define H "0123456789abcdef"
 # define UH "0123456789ABCDEF"
 # define O "01234567"
 
-# include "../libft/libft.h"
+# include "libft.h"
 # include <stdarg.h>
-# include <stdio.h>
+
 typedef struct s_flags
 {
 	int		minus;

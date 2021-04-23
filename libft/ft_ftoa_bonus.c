@@ -6,7 +6,7 @@
 /*   By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/18 14:38:28 by mlanca-c          #+#    #+#             */
-/*   Updated: 2021/03/30 10:06:41 by mlanca-c         ###   ########.fr       */
+/*   Updated: 2021/04/23 13:29:28 by mlanca-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static char	*get_dec(long double d, int precision, char *decimal)
 	len = (int)ft_strlen(decimal) - 1;
 	while (precision-- > 0)
 	{
-		if (d == -9223372036854775808 || d >= 9223372036854775807
+		if (d == -9223372036854775807 || d >= 9223372036854775807
 			|| !ft_remainder(d, 1))
 			decimal[len - precision] = '0';
 		else

@@ -6,7 +6,7 @@
 #    By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/08 10:52:56 by mlanca-c          #+#    #+#              #
-#    Updated: 2021/03/28 19:56:07 by mlanca-c         ###   ########.fr        #
+#    Updated: 2021/04/23 15:03:53 by mlanca-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -71,14 +71,14 @@ EXTRASRC	=	ft_putchar_bonus.c \
 				ft_abs_bonus.c \
 				ft_roundup_number_bonus.c
 EXTRAOBJ	= 	$(EXTRASRC:.c=.o)
-INCLUDES	= 	-I .
+INCS		= 	-I .
 CC			=	gcc
 CFLAGS		=	-Wall -Wextra -Werror
 CLIB		=	ar -rc
 RM			=	rm -f
 
 %.o: %.c
-	$(CC) $(FLAGS) -c $< -o $(<:.c=.o) $(INCS)
+	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o) $(INCS)
 
 all: $(NAME)
 

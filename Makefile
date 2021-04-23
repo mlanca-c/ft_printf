@@ -6,7 +6,7 @@
 #    By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/04 14:40:53 by mlanca-c          #+#    #+#              #
-#    Updated: 2021/03/18 18:10:27 by mlanca-c         ###   ########.fr        #
+#    Updated: 2021/04/21 16:16:16 by mlanca-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,14 +34,13 @@ SRCS	=	ft_printf.c \
 			sources/handle_number.c \
 			sources/handle_double.c
 OBJS	=	$(SRCS:.c=.o)
-INCS	=	-I includes
 CC		=	gcc
-CFLAGS	=	-Wall -Wextra -Werror
+CFLAGS	=	-Wall -Wextra -Werror -Iincludes -Ilibft
 CLIB	=	ar -rc
 RM		=	rm -f
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o) $(INCS)
+	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o) 
 
 all: $(NAME)
 

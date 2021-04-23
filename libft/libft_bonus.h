@@ -6,7 +6,7 @@
 /*   By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/11 19:00:54 by mlanca-c          #+#    #+#             */
-/*   Updated: 2021/03/28 16:51:44 by mlanca-c         ###   ########.fr       */
+/*   Updated: 2021/04/20 09:54:52 by mlanca-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int			ft_putstr(char *str);
 int			ft_putstr_len(char *str, int len);
 int			ft_putnbr(int n);
 int			ft_putnbr_base_int(unsigned long nbr, char *base);
-char		*ft_itoa_base(unsigned n, char *base);
+char		*ft_itoa_base(unsigned int n, char *base);
 int			get_len(int n);
 char		*ft_free_function(char *function, ...);
 char		*ft_llitoa_base(unsigned long long n, char *base);

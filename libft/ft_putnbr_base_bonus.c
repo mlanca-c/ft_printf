@@ -6,7 +6,7 @@
 /*   By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/05 12:09:33 by mlanca-c          #+#    #+#             */
-/*   Updated: 2021/03/28 14:07:04 by mlanca-c         ###   ########.fr       */
+/*   Updated: 2021/04/23 13:31:22 by mlanca-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ static int	base_check(char *str)
 
 void	ft_putnbr_base(unsigned long nbr, char *base, int *bytes)
 {
-	int	b;
+	unsigned long	b;
 
 	if (!base_check(base))
 		return ;

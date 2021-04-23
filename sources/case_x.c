@@ -6,14 +6,19 @@
 /*   By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/11 19:58:25 by mlanca-c          #+#    #+#             */
-/*   Updated: 2021/03/30 10:53:50 by mlanca-c         ###   ########.fr       */
+/*   Updated: 2021/04/20 10:02:58 by mlanca-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "ft_printf.h"
 
 static char	*handle_hash(t_flags *flags, char *hex, int *count)
 {
+	if (!(flags->hash && ft_strncmp("0", hex, 2)))
+	{
+		flags->hash = 0;
+		return (hex);
+	}
 	if (flags->type == 'x')
 		hex = ft_free_function("ft_strjoin", "0x", hex, 2);
 	else
@@ -38,10 +43,7 @@ int	case_x(t_flags *flags, va_list args)
 
 	count = 0;
 	hex = arg_conversions(flags, args);
-	if (flags->hash && ft_strncmp("0", hex, 2))
-		hex = handle_hash(flags, hex, &count);
-	else
-		flags->hash = 0;
+	hex = handle_hash(flags, hex, &count);
 	if (flags->point)
 		flags->zero = 0;
 	hex = handle_number(flags, hex);
