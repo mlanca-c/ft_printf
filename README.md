@@ -1,7 +1,15 @@
 # ft_printf
-42Cursus-ft_printf/42Lisboa
+ 42Cursus-ft_printf/42Lisboa
 
-# Results
-```
-test_spdxiucpercent: 8/8 correct functions | test_fields: 4/4 correct functions | bonus_test: 8/11 correct functions
-```
+# Intro
+
+ > [subject](subject.pdf)
+
+ This project is pretty straight forward. You will recode printf.
+ Hopefully you will be able to reuse it in future projects without the fear of being flagged as a cheater.
+ You will mainly learn how to use variadic arguments.
+ 
+ The versatility of the printf function in C represents a great exercise in programming for us.
+ This project is of moderate difficulty.
+
+ The key to a successful ft_printf is a well-structured and good extensible code.
