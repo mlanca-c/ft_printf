@@ -24,4 +24,4 @@
 
  * [ Tripouille's printfTester](https://github.com/Tripouille/printfTester)
  * [ gavinfielder's pft (Tester)](https://github.com/gavinfielder/pft)
- * [Wiki](https://github.com/mlanca-c/ft_printf/wiki)
+ * [Wiki](https://github.com/mlanca-c/ft_printf/wiki/1.-printf)
