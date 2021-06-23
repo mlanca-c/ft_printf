@@ -6,59 +6,75 @@
 #    By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/04 14:40:53 by mlanca-c          #+#    #+#              #
-#    Updated: 2021/04/21 16:16:16 by mlanca-c         ###   ########.fr        #
+#    Updated: 2021/06/23 12:52:47 by mlanca-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-LIBFT	=	./libft/libft.a
+	# Library Name #
 NAME	=	libftprintf.a
-SRCS	=	ft_printf.c \
-			sources/set_params.c \
-			sources/handle_flags.c \
-			sources/get_case.c \
-			sources/case_c.c \
-			sources/case_s.c \
-			sources/case_percentage.c \
-			sources/case_p.c \
-			sources/case_d.c \
-			sources/case_u.c \
-			sources/case_x.c \
-			sources/case_percentage.c \
-			sources/case_n.c \
-			sources/case_f.c \
-			sources/case_g.c \
-			sources/case_e.c \
-			sources/case_o.c \
-			sources/handle_width.c \
-			sources/arg_conversions.c \
-			sources/handle_number.c \
-			sources/handle_double.c
+
+	# Mandatory and Bonus Part Variables #
+SRCS_H	=	ft_putchar.c ft_putstr.c ft_free_function.c ft_ftoa.c \
+			ft_roundup_number.c
+SRCS	=	ft_printf.c set_params.c handle_flags.c get_case.c case_c.c \
+			case_s.c case_percentage.c case_p.c case_d.c case_u.c case_x.c \
+			case_percentage.c case_n.c case_f.c case_g.c case_e.c case_o.c \
+			handle_width.c arg_conversions.c handle_number.c handle_double.c \
+			$(SRCS_H)
 OBJS	=	$(SRCS:.c=.o)
-CC		=	gcc
-CFLAGS	=	-Wall -Wextra -Werror -Iincludes -Ilibft
-CLIB	=	ar -rc
-RM		=	rm -f
+
+	# Libft #
+LIBFT	=	./libft/libft.a
+
+	# Includes flag for compilation #
+INC			= 	-Ilibft/stack/ -Ilibft/ -I.
+
+	# Compiling Variables #
+CC			=	gcc
+CFLAG		=	-Wall -Wextra -Werror
+CLIB		=	ar -rc
+RM			=	rm -f
+
+	# Debugger #
+ifeq ($(DEBUG), 1)
+	D_FLAG	=	-g
+endif
+
+	# Fsanitize #
+ifeq ($(SANITIZE), 1)
+	D_FLAG	=	-fsanitize=address -g
+endif
+
+	# Colors #
+GREEN		=	\e[38;5;118m
+YELLOW		=	\e[38;5;226m
+RESET		=	\e[0m
+_SUCCESS	=	[$(GREEN)SUCCESS$(RESET)]
+_INFO		=	[$(YELLOW)INFO$(RESET)]
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o) 
+	@ $(CC) $(CFLAG) -c $< -o $(<:.c=.o) $(INC)
 
 all: $(NAME)
 
 bonus: $(NAME)
 
 $(NAME): $(OBJS)
-	$(MAKE) bonus -C ./libft
-	cp $(LIBFT) $(NAME)
-	$(CLIB) $(NAME) $(OBJS)
+	@ $(MAKE) re -C ./libft
+	@ cp $(LIBFT) $(NAME)
+	@ $(CLIB) $(NAME) $(OBJS)
+	@printf "$(_SUCCESS) $(NAME) ready.\n"
 
 clean:
-	$(MAKE) clean -C ./libft
-	$(RM) $(OBJS)
+	@ $(MAKE) clean -C ./libft
+	@ $(RM) $(OBJS)complete
+	@printf "$(_INFO) object files removed.\n"
 
 fclean: clean
-	$(MAKE) fclean -C ./libft
-	$(RM) $(NAME)
+	@ $(MAKE) fclean -C ./libft
+	@ $(RM) $(NAME)
+	@printf "$(_INFO) $(NAME) removed.\n"
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus

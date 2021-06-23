@@ -40,25 +40,25 @@ static char	*handle_h(t_flags *flags, va_list args)
 static char	*handle_l(t_flags *flags, va_list args)
 {
 	if (flags->l == 1 && (flags->type == 'd' || flags->type == 'i'))
-		return (ft_llitoa((long int)va_arg(args, long int)));
+		return (ft_itoa((long int)va_arg(args, long int)));
 	if (flags->l == 1 && flags->type == 'x')
-		return (ft_llitoa_base((unsigned long)va_arg(args, unsigned long), H));
+		return (ft_itoa_base((unsigned long)va_arg(args, unsigned long), H));
 	if (flags->l == 1 && flags->type == 'X')
-		return (ft_llitoa_base((unsigned long)va_arg(args, unsigned long), UH));
+		return (ft_itoa_base((unsigned long)va_arg(args, unsigned long), UH));
 	if (flags->l == 1 && flags->type == 'u')
-		return (ft_llitoa_base((unsigned long)va_arg(args, unsigned long), D));
+		return (ft_itoa_base((unsigned long)va_arg(args, unsigned long), D));
 	if (flags->l == 1 && flags->type == 'o')
-		return (ft_llitoa_base((unsigned long)va_arg(args, unsigned long), O));
+		return (ft_itoa_base((unsigned long)va_arg(args, unsigned long), O));
 	if (flags->l == 2 && (flags->type == 'd' || flags->type == 'i'))
-		return (ft_llitoa((long long)va_arg(args, long long)));
+		return (ft_itoa((long long)va_arg(args, long long)));
 	if (flags->l == 2 && flags->type == 'x')
-		return (ft_llitoa_base(va_arg(args, unsigned long long), H));
+		return (ft_itoa_base(va_arg(args, unsigned long long), H));
 	if (flags->l == 2 && flags->type == 'X')
-		return (ft_llitoa_base(va_arg(args, unsigned long long), UH));
+		return (ft_itoa_base(va_arg(args, unsigned long long), UH));
 	if (flags->l == 2 && flags->type == 'u')
-		return (ft_llitoa_base(va_arg(args, unsigned long long), D));
+		return (ft_itoa_base(va_arg(args, unsigned long long), D));
 	if (flags->l == 2 && flags->type == 'o')
-		return (ft_llitoa_base(va_arg(args, unsigned long long), O));
+		return (ft_itoa_base(va_arg(args, unsigned long long), O));
 	return (0);
 }
 
@@ -81,6 +81,6 @@ char	*arg_conversions(t_flags *flags, va_list args)
 	if (flags->type == 'X')
 		return (ft_itoa_base(va_arg(args, unsigned int), UH));
 	if (flags->type == 'p')
-		return (ft_llitoa_base((unsigned long)va_arg(args, unsigned long), H));
+		return (ft_itoa_base((unsigned long)va_arg(args, unsigned long), H));
 	return (NULL);
 }

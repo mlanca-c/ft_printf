@@ -6,7 +6,7 @@
 /*   By: mlanca-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 14:54:58 by mlanca-c          #+#    #+#             */
-/*   Updated: 2021/04/21 16:06:23 by mlanca-c         ###   ########.fr       */
+/*   Updated: 2021/06/23 12:48:38 by mlanca-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,10 @@ typedef struct s_flags
 	char	type;
 }	t_flags;
 
+
+/*
+** ft_pritf Functions
+*/
 int		ft_printf(const char *fmt, ...);
 int		set_params(char *input, t_flags *flags, va_list args);
 void	handle_star(t_flags *flags, int arg);
@@ -62,5 +66,14 @@ int		handle_width(t_flags *flags, int len);
 char	*arg_conversions(t_flags *flags, va_list args);
 char	*handle_number(t_flags *flags, char *nbr);
 char	*handle_double(t_flags *flags, char *d);
+
+/*
+** Helper Functions
+*/
+int	ft_putchar(char c);
+int	ft_putstr(char *str);
+char	*ft_free_function(char *function, ...);
+char	*ft_ftoa(long double d, int precision);
+char	*ft_roundup_number(char *nbr);
 
 #endif
